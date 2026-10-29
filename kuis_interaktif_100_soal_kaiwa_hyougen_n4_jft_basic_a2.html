@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>100 Soal Kaiwa Hyougen (会話表現) JLPT N4 / JFT-Basic A2</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        borderRadius: { none:'0', sm:'2px', DEFAULT:'3px', md:'3px', lg:'4px', xl:'4px', '2xl':'6px', '3xl':'6px', full:'9999px' },
+        boxShadow: { '2xs':'none', xs:'none', sm:'0 1px 0 #DDE1E8', DEFAULT:'0 1px 0 #DDE1E8', md:'0 2px 0 #C3C9D4', lg:'0 2px 0 #C3C9D4', '2xl':'0 18px 40px rgba(21,27,43,.28)', none:'none' },
+        extend: {
+          fontFamily: {
+            sans: ['"Zen Kaku Gothic New"', '"Yu Gothic"', 'system-ui', 'sans-serif'],
+            jp: ['"Zen Kaku Gothic New"', '"Yu Gothic"', '"Hiragino Kaku Gothic ProN"', 'Meiryo', 'sans-serif'],
+          },
+          colors: {
+            slate: {50:'#F6F7F9',100:'#ECEEF2',200:'#DDE1E8',300:'#C3C9D4',400:'#8B93A3',500:'#667085',600:'#4A5367',700:'#343B4D',800:'#232A3B',900:'#151B2B'},
+            indigo: {50:'#EAF0FA',100:'#D5E1F5',200:'#AFC5EA',300:'#7FA0DA',400:'#4F78C4',500:'#2F58A8',600:'#1D3F8F',700:'#162F6E',800:'#0F2252',900:'#0A173A'},
+            emerald: {50:'#EDF6F1',100:'#D6EBDF',200:'#B0D8C2',300:'#80C0A0',400:'#4DA57A',500:'#2F8F63',600:'#1F7A50',700:'#17623F',800:'#124D33',900:'#0D3624',950:'#082418'},
+            rose: {50:'#FBEFEF',100:'#F6DADA',200:'#EDB7B7',300:'#E08E8E',400:'#D45F5F',500:'#C23B3B',600:'#A92C2C',700:'#8A2222',800:'#6D1C1C',900:'#561616'},
+            amber: {50:'#FFFBE0',100:'#FFF3A8',200:'#FFE86B',300:'#F5D63A',400:'#E8C500',500:'#C9A300',600:'#A38300',700:'#7F6600',800:'#5E4A00',900:'#403200'}
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Zen Kaku Gothic New', system-ui, sans-serif; background: #E4E8EE; color: #232A3B; }
+    .hidden { display: none !important; }
+    .mincho { font-family: 'Shippori Mincho', 'Yu Mincho', serif; }
+    .jp-text { font-family: 'Zen Kaku Gothic New', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; line-height: 1.8; letter-spacing: 0.03em; }
+    :focus-visible { outline: 3px solid #E8C500; outline-offset: 2px; }
+
+    /* kertas petak ala genkō yōshi, hanya di area dialog */
+    .grid-paper { background-color: #F6F7F9; background-image: linear-gradient(#E3E7EE 1px, transparent 1px), linear-gradient(90deg, #E3E7EE 1px, transparent 1px); background-size: 28px 28px; }
+    .panel { background: #fff; border: 1px solid #C3C9D4; border-radius: 4px; }
+    .sheet { background: #fff; border: 1px solid #A9B1C0; border-top: 5px solid #0A173A; border-radius: 4px; }
+
+    .btn { padding: .6rem 1rem; font-size: .875rem; font-weight: 700; border: 1px solid transparent; border-radius: 4px; transition: background .15s, color .15s, border-color .15s; }
+    .btn:active { transform: translateY(1px); }
+    .btn-pri { background: #0A173A; color: #fff; }
+    .btn-pri:hover { background: #1D3F8F; }
+    .btn-sec { background: #fff; color: #162F6E; border-color: #7FA0DA; }
+    .btn-sec:hover { background: #EAF0FA; }
+    .btn-wrong { background: #fff; color: #A92C2C; border-color: #D45F5F; }
+    .btn-wrong:hover { background: #FBEFEF; }
+    .btn-ghost { background: #ECEEF2; color: #343B4D; }
+    .btn-ghost:hover { background: #DDE1E8; }
+    .field { background: #fff; border: 1px solid #8B93A3; border-radius: 4px; padding: .6rem .75rem; font-size: .875rem; font-weight: 500; color: #151B2B; }
+    .field:focus { outline: 3px solid #FFE86B; outline-offset: 0; border-color: #0A173A; }
+
+    .tab { padding: .5rem .15rem; margin: 0 .55rem; font-size: .875rem; font-weight: 700; color: #AFC5EA; border-bottom: 3px solid transparent; transition: color .15s; }
+    .tab:hover { color: #fff; }
+    .tab-on { color: #fff; border-bottom-color: #FFE86B; }
+    .tab span { white-space: nowrap; }
+
+    @keyframes fadeInSlide { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-in { animation: fadeInSlide 0.22s ease-out forwards; }
+    /* bagian kosong berkedip seperti stabilo */
+    @keyframes pulseBlank { 0%,100% { background-color: rgba(255,232,107,.45); } 50% { background-color: rgba(255,232,107,.95); } }
+    .blank-slot-pending { animation: pulseBlank 1.8s infinite; }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #ECEEF2; }
+    ::-webkit-scrollbar-thumb { background: #8B93A3; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #667085; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-amber-200 selection:text-slate-900">
+
+  <header class="bg-indigo-900 text-white sticky top-0 z-30 border-b-4 border-amber-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
+      <div class="flex items-center gap-3.5">
+        <div class="w-11 h-11 border-2 border-white flex items-center justify-center shrink-0">
+          <span class="mincho text-2xl font-extrabold leading-none">会</span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2.5">
+            <h1 class="mincho font-extrabold text-lg sm:text-xl leading-tight">Kaiwa Hyougen N4 / JFT-A2</h1>
+            <span class="hidden sm:inline-flex px-2 py-0.5 rounded-sm text-xs font-bold bg-amber-200 text-slate-900">Standar Murni N4</span>
+          </div>
+          <p class="text-xs text-indigo-200">100 Soal Percakapan Bahasa Jepang Sehari-hari • Acak Otomatis & Pembahasan</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1">
+        <nav class="flex items-end" aria-label="Menu Utama">
+          <button id="tabBtnQuiz" onclick="switchTab('quiz')" class="tab tab-on"><span>Latihan Kuis</span></button>
+          <button id="tabBtnBank" onclick="switchTab('bank')" class="tab"><span>Daftar 100 Soal</span></button>
+        </nav>
+        <button id="soundToggleBtn" onclick="toggleSound()" title="Suara Efek Klik" aria-label="Suara Efek Klik" class="ml-2 w-9 h-9 border border-indigo-400 hover:bg-indigo-800 flex items-center justify-center transition-colors">
+          <i id="soundIcon" class="fa-solid fa-volume-high text-sm text-indigo-600"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6">
+
+    <!-- ==================== VIEW 1: INTERACTIVE QUIZ ==================== -->
+    <section id="viewQuiz">
+      <div class="lg:grid lg:grid-cols-[18.5rem_minmax(0,1fr)] lg:gap-7 items-start space-y-5 lg:space-y-0">
+
+        <aside class="lg:sticky lg:top-28 space-y-4">
+          <div class="panel p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <label for="modeSelect" class="text-sm font-bold text-slate-800">Mode Sesi:</label>
+              <button onclick="openResetModal()" title="Reset Semua Riwayat & Skor" aria-label="Reset Semua Riwayat & Skor" class="w-8 h-8 text-slate-500 hover:text-rose-700 hover:bg-rose-50 transition-colors">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+            <select id="modeSelect" onchange="handleModeChange()" class="field w-full">
+              <option value="all">Semua 100 Soal (Acak Penuh)</option>
+              <option value="10">10 Soal Cepat (Acak)</option>
+              <option value="25">25 Soal Latihan (Acak)</option>
+              <option value="50">50 Soal Simulasi (Acak)</option>
+              <option value="turns-2">Filter: Dialog 2 Giliran Bicara (15 Soal)</option>
+              <option value="turns-3">Filter: Dialog 3 Giliran Bicara (30 Soal)</option>
+              <option value="turns-4">Filter: Dialog 4 Giliran Bicara (30 Soal)</option>
+              <option value="turns-5">Filter: Dialog 5 Giliran Bicara (20 Soal)</option>
+              <option value="turns-6">Filter: Dialog 6 Giliran Bicara (5 Soal)</option>
+              <option value="wrong" id="wrongModeOption">Ulangi Soal Salah (0 Soal)</option>
+            </select>
+            <div class="pt-3 border-t border-slate-200 space-y-2">
+              <div class="flex items-center justify-between gap-2">
+                <label for="countNumber" class="text-sm font-bold text-slate-800">Jumlah Soal (1–50):</label>
+                <input id="countNumber" type="number" min="1" max="50" inputmode="numeric" placeholder="Semua" oninput="syncCountFrom('number')" onchange="applyCustomCount()" class="field w-24 text-center !py-1.5" />
+              </div>
+              <input id="countRange" type="range" min="1" max="50" value="50" aria-label="Jumlah soal" oninput="syncCountFrom('range')" onchange="applyCustomCount()" class="w-full accent-indigo-900 cursor-pointer" />
+              <div class="flex items-center justify-between gap-2">
+                <span id="countHint" class="text-xs text-slate-500">Sesi ini berisi 100 soal</span>
+                <button id="btnClearCount" onclick="clearCustomCount()" class="hidden text-xs font-bold text-indigo-700 hover:text-indigo-900 underline">Pakai bawaan mode</button>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <button onclick="reshuffleCurrentMode()" class="btn btn-sec inline-flex items-center gap-2">
+                <i class="fa-solid fa-shuffle"></i><span>Acak Ulang</span>
+              </button>
+              <button id="btnRetryWrongQuick" onclick="startWrongOnlyMode()" class="btn btn-wrong hidden items-center gap-2">
+                <i class="fa-solid fa-rotate-left"></i>
+                <span>Latih Soal Salah (<span id="wrongCountBadge">0</span>)</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="panel grid grid-cols-3 divide-x divide-slate-200 text-center">
+            <div class="py-3"><strong id="statCorrect" class="mincho block text-3xl font-extrabold text-emerald-700 leading-none">0</strong><span class="text-xs font-medium text-slate-500">Benar</span></div>
+            <div class="py-3"><strong id="statWrong" class="mincho block text-3xl font-extrabold text-rose-600 leading-none">0</strong><span class="text-xs font-medium text-slate-500">Salah</span></div>
+            <div class="py-3"><strong id="statAccuracy" class="mincho block text-3xl font-extrabold text-indigo-800 leading-none">0%</strong><span class="text-xs font-medium text-slate-500">Akurasi</span></div>
+          </div>
+
+          <div class="panel p-4">
+            <div class="flex items-baseline justify-between gap-2 mb-2.5">
+              <span id="progressLabel" class="text-sm font-bold text-slate-900">Soal 1 dari 100</span>
+              <span id="answeredCountLabel" class="text-xs font-medium text-slate-500">0 terjawab</span>
+            </div>
+            <div class="w-full h-2 bg-slate-200 rounded-sm overflow-hidden">
+              <div id="progressBarFill" class="h-full bg-indigo-900 transition-all duration-300" style="width: 1%"></div>
+            </div>
+            <p class="hidden lg:block text-xs text-slate-500 mt-3 leading-relaxed">Pintasan: Tombol <kbd class="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded-sm text-slate-700 text-[11px]">A-D</kbd> / <kbd class="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded-sm text-slate-700 text-[11px]">1-4</kbd>, <kbd class="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded-sm text-slate-700 text-[11px]">→</kbd> Lanjut</p>
+          </div>
+        </aside>
+
+        <div class="min-w-0 space-y-5">
+
+          <!-- ACTIVE QUESTION CARD -->
+          <div id="questionCardContainer" class="sheet overflow-hidden">
+            <div class="border-b border-slate-300 px-5 sm:px-7 py-3.5 flex flex-wrap items-center justify-between gap-2">
+              <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1.5">
+                <span id="qIndexBadge" class="mincho text-2xl font-extrabold text-indigo-900">Soal #1</span>
+                <span id="qOrigIdBadge" class="text-xs font-medium text-slate-500">No. Asli: 1</span>
+                <span id="qTurnBadge" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-sm text-xs font-bold bg-amber-100 text-amber-900"><i class="fa-regular fa-comment-dots"></i> 3 Giliran Bicara</span>
+              </div>
+              <span id="qStatusBadge" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-sm text-xs font-semibold bg-slate-100 text-slate-600">Belum Dijawab</span>
+            </div>
+
+            <div class="p-5 sm:p-7 grid-paper">
+              <p class="text-sm font-bold text-slate-700 mb-4 bg-white/90 inline-block px-2 py-1 rounded-sm">Pilih ungkapan yang paling tepat untuk mengisi bagian kosong (＿＿＿＿＿):</p>
+              <div id="dialogContainer" class="space-y-3.5 max-w-3xl"></div>
+            </div>
+
+            <div class="px-5 sm:px-7 pb-6 pt-5 border-t border-slate-300">
+              <div class="mb-3">
+                <span class="text-sm font-bold text-slate-700">Pilihan Jawaban (Urutan Diacak):</span>
+              </div>
+              <div id="optionsContainer" class="grid grid-cols-1 gap-2.5"></div>
+
+              <div id="feedbackBox" class="hidden mt-6 rounded-md p-5 border-2 animate-fade-in"></div>
+
+              <div class="mt-6 pt-5 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+                <button id="btnPrevQ" onclick="prevQuestion()" class="btn btn-sec inline-flex items-center gap-2 disabled:opacity-40 disabled:pointer-events-none">
+                  <i class="fa-solid fa-arrow-left"></i><span>Sebelumnya</span>
+                </button>
+                <div class="flex items-center gap-2">
+                  <button id="btnJumpModal" onclick="openQuestionGridModal()" class="btn btn-ghost inline-flex items-center gap-2">
+                    <i class="fa-solid fa-table-cells"></i><span>Peta Soal</span>
+                  </button>
+                  <button id="btnNextQ" onclick="nextQuestion()" class="btn btn-pri inline-flex items-center gap-2">
+                    <span id="btnNextText">Soal Berikutnya</span><i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SESSION SUMMARY CARD -->
+          <div id="sessionCompleteCard" class="hidden sheet p-6 sm:p-9 space-y-7 animate-fade-in">
+            <div class="space-y-1.5">
+              <h2 class="mincho text-3xl sm:text-4xl font-extrabold text-indigo-900">Sesi Latihan Selesai!</h2>
+              <p id="summarySubtitle" class="text-sm text-slate-600">Berikut adalah ringkasan hasil pengerjaan Anda pada sesi ini.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 border border-slate-300 divide-x divide-slate-300 [&>div:nth-child(3)]:border-l-0">
+              <div class="p-4"><div class="text-xs font-medium text-slate-500">Total Soal</div><div id="sumTotal" class="mincho text-4xl font-extrabold text-slate-900 mt-1">100</div></div>
+              <div class="p-4"><div class="text-xs font-medium text-emerald-700">Jawaban Benar</div><div id="sumCorrect" class="mincho text-4xl font-extrabold text-emerald-700 mt-1">0</div></div>
+              <div class="p-4"><div class="text-xs font-medium text-rose-700">Jawaban Salah</div><div id="sumWrong" class="mincho text-4xl font-extrabold text-rose-600 mt-1">0</div></div>
+              <div class="p-4 bg-amber-100"><div class="text-xs font-bold text-slate-800">Skor Akhir</div><div id="sumScore" class="mincho text-4xl font-extrabold text-indigo-900 mt-1">0%</div><div id="sumScoreDetail" class="text-xs font-medium text-slate-700 mt-1">0 dari 0 soal</div></div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3">
+              <button onclick="reshuffleCurrentMode()" class="btn btn-pri inline-flex items-center gap-2">
+                <i class="fa-solid fa-shuffle"></i><span>Mulai & Acak Baru</span>
+              </button>
+              <button id="btnSummaryRetryWrong" onclick="startWrongOnlyMode()" class="btn btn-wrong inline-flex items-center gap-2">
+                <i class="fa-solid fa-rotate-left"></i><span>Ulangi Soal yang Salah Saja</span>
+              </button>
+              <button onclick="returnToQuizFromSummary()" class="btn btn-ghost inline-flex items-center gap-2">
+                <i class="fa-solid fa-eye"></i><span>Tinjau Kembali Jawaban</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 2: BANK & SEARCH 100 SOAL ==================== -->
+    <section id="viewBank" class="hidden space-y-5">
+      <div class="panel p-4 sm:p-5 space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+          <div>
+            <h2 class="mincho text-xl sm:text-2xl font-extrabold text-indigo-900">Bank 100 Soal Kaiwa Hyougen N4 / JFT-Basic A2</h2>
+            <p class="text-sm text-slate-500 mt-1">Cari berdasarkan kata kunci Jepang/Indonesia, nama pembicara, atau filter jumlah giliran bicara.</p>
+          </div>
+          <button id="toggleAllAnswersBtn" onclick="toggleShowAllBankAnswers()" class="btn btn-sec inline-flex items-center gap-2 shrink-0">
+            <i class="fa-solid fa-eye"></i><span id="toggleAllAnswersText">Tampilkan Semua Kunci</span>
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div class="sm:col-span-2 relative">
+            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+            <input id="bankSearchInput" type="text" oninput="renderBankList()" placeholder="Cari kosakata Jepang (mis: 病院, 切符, よやく) atau penjelasan Indonesia..." class="field w-full pl-10" />
+          </div>
+          <select id="bankFilterSelect" onchange="renderBankList()" class="field w-full">
+            <option value="all">Semua Panjang Dialog (100 Soal)</option>
+            <option value="2">2 Giliran Bicara (15 Soal)</option>
+            <option value="3">3 Giliran Bicara (30 Soal)</option>
+            <option value="4">4 Giliran Bicara (30 Soal)</option>
+            <option value="5">5 Giliran Bicara (20 Soal)</option>
+            <option value="6">6 Giliran Bicara (5 Soal)</option>
+            <option value="wrong">Pernah Dijawab Salah</option>
+          </select>
+        </div>
+        <div class="text-sm text-slate-500 font-medium"><span id="bankResultCount">Menampilkan 100 dari 100 soal</span></div>
+      </div>
+
+      <div id="bankListContainer" class="space-y-4"></div>
+    </section>
+  </main>
+
+  <!-- QUESTION MAP MODAL -->
+  <div id="questionGridModal" class="fixed inset-0 bg-slate-900/70 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-md max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border-t-4 border-indigo-900 overflow-hidden animate-fade-in">
+      <div class="px-6 py-4 border-b border-slate-300 flex items-center justify-between">
+        <div>
+          <h3 class="mincho font-extrabold text-indigo-900 text-xl">Peta Navigasi Soal Sesi Ini</h3>
+          <p class="text-sm text-slate-500">Klik nomor untuk melompat langsung ke soal tersebut.</p>
+        </div>
+        <button onclick="closeQuestionGridModal()" aria-label="Tutup" class="w-9 h-9 bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="p-6 overflow-y-auto">
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-slate-600 mb-4 pb-3 border-b border-slate-200">
+          <span class="flex items-center gap-2"><span class="w-3.5 h-3.5 rounded-full bg-indigo-600 inline-block"></span> Sedang Dibuka</span>
+          <span class="flex items-center gap-2"><span class="w-3.5 h-3.5 rounded-full bg-emerald-500 inline-block"></span> Dijawab Benar</span>
+          <span class="flex items-center gap-2"><span class="w-3.5 h-3.5 rounded-full bg-rose-500 inline-block"></span> Dijawab Salah</span>
+          <span class="flex items-center gap-2"><span class="w-3.5 h-3.5 rounded-full bg-slate-200 border border-slate-300 inline-block"></span> Belum Dijawab</span>
+        </div>
+        <div id="questionGridCells" class="grid grid-cols-5 sm:grid-cols-10 gap-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESET CONFIRMATION MODAL -->
+  <div id="resetModal" class="fixed inset-0 bg-slate-900/70 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-md max-w-md w-full p-6 shadow-2xl border-t-4 border-rose-600 space-y-4 animate-fade-in">
+      <div>
+        <h3 class="mincho text-xl font-extrabold text-slate-900">Reset Skor & Acak Baru?</h3>
+        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+          Seluruh progres sesi saat ini dan daftar riwayat soal salah akan dihapus, lalu 100 soal beserta urutan pilihan jawabannya akan diacak ulang dari awal.
+        </p>
+      </div>
+      <div class="flex items-center justify-end gap-2 pt-2">
+        <button onclick="closeResetModal()" class="btn btn-ghost">Batal</button>
+        <button onclick="confirmFullReset()" class="btn bg-rose-600 hover:bg-rose-700 text-white">Ya, Reset & Acak Baru</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="mt-10 bg-indigo-900 text-indigo-200 py-5 text-xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <span>100 Soal Kaiwa Hyougen (会話表現) JLPT N4 / JFT-Basic A2 • Standar Kosakata & Kanji Murni N4</span>
+      <span>Urutan soal & opsi A/B/C/D diacak otomatis dengan <em>Fisher-Yates Shuffle</em></span>
+    </div>
+  </footer>
+
+  <!-- ==================== APPLICATION SCRIPT & 100 QUESTIONS DATA ==================== -->
+  <script>
+    /**
+     * DATASET 100 SOAL KAIWA HYOUGEN JLPT N4 / JFT-BASIC A2 (MURNI N4)
+     * Setiap item memiliki:
+     * id: Nomor asli (1 - 100)
+     * turns: Array giliran bicara [[nama_pembicara, kalimat_dialog], ...]
+     * correct: Teks jawaban yang benar
+     * distractors: Array 3 pengecoh
+     * explanation: Penjelasan konteks dalam bahasa Indonesia
+     */
+    const RAW_QUESTIONS = [
+      {
+        id: 1,
+        turns: [["ゆい","はなさん、そのかばん、とてもきれいですね。どこで買ったんですか。"],["はな","ありがとうございます。これ、＿＿＿＿＿。"],["ゆい","えっ、自分で作ったんですか。すごいですね！"]],
+        correct: "先週の休みに、自分で作ったんです。",
+        distractors: ["たんじょうびに母からもらったんです。","駅前のデパートで買いました。","インターネットで買いました。"],
+        explanation: "Respons Yui pada giliran ketiga adalah terkejut bahwa Hana membuatnya sendiri (「えっ、自分で作ったんですか」), sehingga kalimat kedua Hana menyatakan bahwa ia membuatnya sendiri."
+      },
+      {
+        id: 2,
+        turns: [["ミカ","すみません、きのうここでパンを1個買ったんですが、レシートを見たら2個のお金になっていました。"],["けんた","えっ、すみません。1個しか買っていないんですね。"],["ミカ","はい、カレーパンを1個だけ買いました。"],["けんた","たいへんしつれいしました。＿＿＿＿＿。"]],
+        correct: "今すぐ1個分のお金をお返しします。",
+        distractors: ["では、もう1個分のお金をください。","レシートがないとお金は返せませんよ。","カレーパンは今日もうありません。"],
+        explanation: "Karena pelanggan hanya membeli 1 roti tetapi tertulis 2 roti di struk, pelayan meminta maaf dan segera mengembalikan uang untuk 1 roti."
+      },
+      {
+        id: 3,
+        turns: [["マリア","すみません、今日返す本を、家にわすれてしまいました。"],["さとう","そうですか。＿＿＿＿＿。明日かならず持ってきてくださいね。"],["マリア","はい、わかりました。すみません。"]],
+        correct: "じゃあ、明日でもいいですよ。",
+        distractors: ["今日中に買ってくださいね。","もう借りられなくなりますよ。","図書館は今日お休みですよ。"],
+        explanation: "Sato menanggapi dengan memberi kelonggaran pengembalian besok (「じゃあ、明日でもいいですよ」) dan mengingatkan agar besok pasti dibawa."
+      },
+      {
+        id: 4,
+        turns: [["ミカ","すみません、＿＿＿＿＿。まどを少し閉めてもいいですか。"],["たろう","あ、すみません。どうぞ閉めてください。"]],
+        correct: "風が入ってきて寒いんですが。",
+        distractors: ["新しい風を入れたいんですが。","外のけしきがよく見えないんですが。","部屋の中がとても暑いんですが。"],
+        explanation: "Mika meminta izin menutup jendela, sehingga alasan yang tepat di awal kalimat adalah karena angin masuk dan terasa dingin."
+      },
+      {
+        id: 5,
+        turns: [["たろう","ナオミさん、今度の金曜日の夜、会社のみんなで食事に行くんですが、行けますか。"],["ナオミ","金曜日の夜ですね。何時ごろからですか。"],["たろう","7時から駅の近くのレストランで始めます。"],["ナオミ","じつは金曜日、6時半まで病院のよやくがあるんです。＿＿＿＿＿。"],["たろう","ええ、もちろんいいですよ。着いたら電話してくださいね。"]],
+        correct: "30分ぐらいおくれて行ってもいいですか。",
+        distractors: ["7時より前にレストランへ行ってもいいですか。","病院には行かないことにしますね。","金曜日は一日中あいていますよ。"],
+        explanation: "Acara mulai jam 7, sedangkan Naomi ada janji di rumah sakit sampai jam 6.30. Taro mengizinkan dan meminta Naomi menelepon saat tiba, berarti Naomi meminta izin datang terlambat sekitar 30 menit."
+      },
+      {
+        id: 6,
+        turns: [["マイク","さとうさん、きのうは荷物を運んでくれて、ほんとうにありがとうございました。"],["さとう","いいえ、どういたしまして。新しい部屋、広くていいですね。"],["マイク","ええ。＿＿＿＿＿、今度の日曜日にうちへご飯を食べに来ませんか。"],["さとう","わあ、うれしいです。ぜひ行きます。"]],
+        correct: "わたしの国の料理を作りますから。",
+        distractors: ["まだ荷物がぜんぜんかたづいていませんから。","日曜日は家にいませんから。","また荷物を運んでもらいたいので。"],
+        explanation: "Mike mengundang Sato makan di rumahnya pada hari Minggu dengan menawarkan akan memasak masakan negaranya."
+      },
+      {
+        id: 7,
+        turns: [["リナ","けんたさん、かいぎ室のエアコン、けしましたか。"],["けんた","あ、電気はけしたんですが、エアコンはわすれていました。"],["リナ","＿＿＿＿＿。"],["けんた","すみません、今から行ってけしてきます。"]],
+        correct: "だれも使わないなら、けしておいたほうがいいですよ。",
+        distractors: ["じゃあ、電気もつけておきましょう。","エアコンはつけたままにしてください。","わたしがさっきけしておきましたよ。"],
+        explanation: "Kenta meminta maaf dan berkata akan pergi mematikannya sekarang, sehingga Rina mengingatkan agar AC dimatikan jika tidak ada yang memakai ruangan."
+      },
+      {
+        id: 8,
+        turns: [["たくや","すみません、来週から使う電車のパスを買いたいんですが。"],["さくら","はい、学校へ行くパスですか、会社へ行くパスですか。"],["たくや","学校へ行くパスです。4月からこの近くの大学に通うんです。"],["さくら","かしこまりました。＿＿＿＿＿。"],["たくや","あ、学生のカードですね。はい、これです。"],["さくら","ありがとうございます。では、この紙にお名前と乗る駅を書いてください。"]],
+        correct: "では、学生のカードを見せてもらえますか。",
+        distractors: ["来週になってからまた来てください。","会社へ行くパスのほうが安くなりますよ。","大学の先生に電話をしてください。"],
+        explanation: "Untuk membeli pas kereta pelajar, petugas meminta kartu pelajar (学生のカード), yang dikonfirmasi oleh ucapan Takuya pada giliran kelima."
+      },
+      {
+        id: 9,
+        turns: [["あおい","もしもし、あおいですが。ゆいさん、今どこにいますか。"],["ゆい","ごめんなさい！今、バスに乗っているんですが、道に車が多くて進まないんです。"],["あおい","そうですか。映画が始まるまであと20分ありますけど、まにあいそうですか。"],["ゆい","＿＿＿＿＿。さきに映画館の中に入っていてもらえますか。"],["あおい","わかりました。ゆいさんの切符はうけつけの人に渡しておきますね。"]],
+        correct: "少しおくれるかもしれません。",
+        distractors: ["あと5分で着くから、外で待っていてください。","今日は映画を見に行くのをやめにしましょう。","もう映画館の前に着いているからだいじょうぶですよ。"],
+        explanation: "Yui meminta Aoi masuk duluan ke gedung bioskop karena kemungkinan ia akan sedikit terlambat."
+      },
+      {
+        id: 10,
+        turns: [["ナオミ","＿＿＿＿＿。3番の電車でいいですか。"],["さとう","いいえ、東京駅へ行く電車は3番のホームではなくて、4番のホームですよ。"]],
+        correct: "すみません、東京駅へ行きたいんですが。",
+        distractors: ["すみません、この電車はどこから来ましたか。","すみません、今何時か分かりますか。","あのう、切符売り場はどこですか。"],
+        explanation: "Sato menjelaskan bahwa kereta tujuan Stasiun Tokyo berangkat dari peron 4, bukan peron 3. Berarti di awal dialog Naomi menyampaikan maksudnya ingin pergi ke Stasiun Tokyo."
+      },
+      {
+        id: 11,
+        turns: [["たろう","すみません、エアコンを少し弱くしてもいいですか。"],["リナ","＿＿＿＿＿。わたしも少し寒いと思っていたんです。"]],
+        correct: "ええ、どうぞ。",
+        distractors: ["もっと涼しくしましょう。","すみません、今使っています。","いいえ、いけませんよ。"],
+        explanation: "Rina juga merasa agak dingin (寒い), sehingga ketika Taro meminta izin mengecilkan AC, Rina menyetujuinya dengan 「ええ、どうぞ」."
+      },
+      {
+        id: 12,
+        turns: [["ソラ","ゆいさん、お昼ご飯はもう食べましたか。"],["ゆい","いいえ、これからです。ソラさんは？"],["ソラ","わたしもまだなんです。駅前に新しいラーメン屋ができたんですが、＿＿＿＿＿。"],["ゆい","いいですね！わたしも行ってみたかったんです。行きましょう。"]],
+        correct: "いっしょに行ってみませんか。",
+        distractors: ["ひとりで行くつもりです。","あまりおいしくなかったですよ。","もう食べてきましたよ。"],
+        explanation: "Yui menjawab 'Bagus ya! Saya juga ingin mencoba pergi. Ayo pergi', sehingga kalimat Sora adalah ajakan untuk mencoba pergi bersama."
+      },
+      {
+        id: 13,
+        turns: [["ユミ","すずきさん、きのうの夜、強い雨と風でしたが、家のほうはだいじょうぶでしたか。"],["すずき","ええ、にわの木が少しおれましたが、たいしたことはありませんでした。ユミさんは？"],["ユミ","＿＿＿＿＿。でも、風の音がすごくてあまり寝られませんでした。"]],
+        correct: "うちのほうも、なにももんだいありませんでした。",
+        distractors: ["まどがわれてたいへんなことになりました。","わたしはきのう、雨に気がつきませんでした。","ええ、今からホテルへ行くところです。"],
+        explanation: "Kalimat berikutnya diawali dengan 「でも、風の音がすごくて…」 (tetapi karena suara anginnya kencang...), sehingga kalimat sebelumnya menyatakan bahwa di rumahnya juga tidak ada masalah."
+      },
+      {
+        id: 14,
+        turns: [["たろう","ミカさん、よかったらこのおかし、食べませんか。北海道のおみやげなんです。"],["ミカ","わあ、おいしそうですね。＿＿＿＿＿。"],["たろう","どうぞ、たくさんありますから。"]],
+        correct: "じゃあ、一ついただきます。",
+        distractors: ["ごちそうさまでした、おいしかったです。","いいえ、北海道へは行きません。","おみやげを買ってきてあげますね。"],
+        explanation: "Saat ditawari camilan oleh teman, ungkapan menerima tawaran yang tepat sebelum makan adalah 「じゃあ、一ついただきます」."
+      },
+      {
+        id: 15,
+        turns: [["ジョン","ゆいさん、今度友だちのけっこんのパーティーへ行くんですが、どんな服を着ていけばいいですか。"],["ゆい","男の人は、暗い色のスーツに白いネクタイをしますよ。"],["ジョン","黒いネクタイでもいいですか。"],["ゆい","いいえ、＿＿＿＿＿。白いネクタイのほうがいいですよ。"]],
+        correct: "黒いネクタイはおそうしきのときに使うんです。",
+        distractors: ["けっこんのパーティーには黒いネクタイが一番いいですよ。","どんな色のネクタイでもじゆうにつけていいですよ。","ネクタイはしないでTシャツで行くのがふつうです。"],
+        explanation: "Yui menjawab 「いいえ」 dan menyarankan dasi putih karena di Jepang dasi hitam dipakai saat upacara pemakaman (おそうしき)."
+      },
+      {
+        id: 16,
+        turns: [["マリア","やまださん、このコピーのきかいの使い方を教えてもらえませんか。紙の表とうらにコピーしたいんですが。"],["やまだ","ああ、それなら、まずこの『表とうら』というボタンをおします。"],["マリア","これですね。おしました。"],["やまだ","＿＿＿＿＿。"],["マリア","わかりました。……あ、きれいに両方コピーできました！"]],
+        correct: "あとはここに紙をおいて、スタートボタンをおすだけですよ。",
+        distractors: ["電気をけしてからもう一度やりなおしてくださいね。","このきかいは古いからコピーができないんですよ。","紙を1枚ずつ手で入れないといけませんよ。"],
+        explanation: "Setelah menekan tombol bolak-balik pada giliran ketiga, Yamada menjelaskan langkah terakhir (meletakkan kertas dan menekan tombol start) sehingga Maria berhasil melakukan fotokopi."
+      },
+      {
+        id: 17,
+        turns: [["ナオミ","たろうさん、いつもおべんとうを持ってきていますね。自分で作っているんですか。"],["たろう","ええ、体のために先月から作り始めたんです。"],["ナオミ","すごいですね。毎朝早く起きるのはたいへんじゃありませんか。"],["たろう","＿＿＿＿＿。朝はご飯を入れるだけですよ。"]],
+        correct: "前の日の夜に料理を作っておくので、かんたんですよ。",
+        distractors: ["じつは、毎日コンビニで買ってから来ているんです。","ええ、毎朝4時に起きて1時間かけて作っています。","たいへんなので、もう来週からやめることにしました。"],
+        explanation: "Kalimat berikutnya menjelaskan bahwa pagi hari ia hanya tinggal memasukkan nasi, yang berarti masakannya sudah dibuat pada malam sebelumnya."
+      },
+      {
+        id: 18,
+        turns: [["たろう","すずきさん、このコピーのきかい、赤い電気がついていて動かないんですが。"],["すずき","どれどれ。ああ、中に紙が止まっていますね。"],["たろう","紙が止まっているんですか。＿＿＿＿＿。"],["すずき","よこのドアを開けて、ゆっくり紙を出せばだいじょうぶですよ。"],["たろう","やってみます。……あ、出せました！ありがとうございます。"]],
+        correct: "どうしたらいいですか。",
+        distractors: ["新しい紙を入れればいいんですね。","新しいきかいを買いましょうか。","部屋の電気をけしましょうか。"],
+        explanation: "Suzuki menjelaskan cara membuka pintu samping dan mengeluarkan kertas perlahan, sehingga pertanyaan Taro sebelumnya adalah menanyakan apa yang harus dilakukan."
+      },
+      {
+        id: 19,
+        turns: [["ジョン","すずきさん、この紙の書き方がよく分からないんですが。"],["すずき","ああ、それは先週から書き方がかわったんですよ。＿＿＿＿＿。"],["ジョン","ありがとうございます。たすかります。"]],
+        correct: "書き方のれいがありますから、今持ってきますね。",
+        distractors: ["わたしも書き方が分かりません。","先週のうちに出してください。","自分でしらべて書いてくださいね。"],
+        explanation: "John mengucapkan terima kasih dan merasa terbantu, sehingga kalimat Suzuki pasti berupa tawaran bantuan seperti mengambilkan contoh cara penulisan."
+      },
+      {
+        id: 20,
+        turns: [["さとう","ミカさん、新しいアパートの近くにスーパーはありますか。"],["ミカ","ええ、歩いて5分のところに大きいスーパーがあって、夜11時まであいているんです。"],["さとう","へえ、＿＿＿＿＿。"]],
+        correct: "仕事で遅くなっても買い物に行けて便利ですね。",
+        distractors: ["駅から遠くて買い物に行くのがたいへんそうですね。","夜早く閉まってしまうから不便ですね。","そのアパートには住まないほうがいいですね。"],
+        explanation: "Supermarket berjarak 5 menit jalan kaki dan buka sampai jam 11 malam, sehingga komentar yang tepat adalah memuji kemudahannya untuk berbelanja meski pulang kerja larut."
+      },
+      {
+        id: 21,
+        turns: [["たなか","すずきさん、今度の土曜日、学校のコートでテニスをしませんか。"],["すずき","いいですね！ぜひやりたいです。でも、ラケットを持っていないんです。"],["たなか","＿＿＿＿＿。そこで1本200円で借りられますよ。"],["すずき","そうなんですか。じゃあ、動きやすい服と靴で行きますね。"]],
+        correct: "買わなくてもだいじょうぶですよ。",
+        distractors: ["わたしもラケットを持っていないんです。","ラケットがないならできませんよ。","お店で買ってきてくださいね。"],
+        explanation: "Tanaka menjelaskan bahwa raket bisa disewa di sana seharga 200 yen, sehingga ia memberi tahu Suzuki bahwa tidak perlu membeli raket."
+      },
+      {
+        id: 22,
+        turns: [["マイク","たなかさん、今度の休みに友だちと高い山にのぼるんですが、たなかさんはのぼったことがありますか。"],["たなか","ええ、去年のぼりましたよ。天気はよさそうですか。"],["マイク","はい、いい天気だそうです。昼は暑いから、うすいシャツで行こうと思っています。"],["たなか","いや、＿＿＿＿＿。わたしはセーターを持っていってよかったですよ。"],["マイク","えっ、そんなに寒いんですか。じゃあ、暖かい服も持っていきます。"]],
+        correct: "山の上は夏でもすごく寒くなりますから、あつい服もいりますよ。",
+        distractors: ["雨が降ってもかさをさせばぜんぜん寒くありませんよ。","山の上は昼も夜もずっと暑いから、うすいシャツでいいですよ。","その山は冬にしかのぼることができない山なんですよ。"],
+        explanation: "Mike terkejut ('Eh, sedingin itu?') dan memutuskan membawa pakaian hangat, karena Tanaka memperingatkan bahwa di atas gunung meskipun musim panas udara menjadi sangat dingin."
+      },
+      {
+        id: 23,
+        turns: [["ゆい","たくやくん、今度の土曜日、みんなでパーティーをするんだけど、来られる？"],["たくや","土曜日は午前中だけ病院へ行く用事があるんだ。＿＿＿＿＿。"],["ゆい","うん、お昼すぎから始めるから、ぜんぜんいいよ。"]],
+        correct: "午後から行ってもいいかな。",
+        distractors: ["日曜日なら行けるんだけど。","今度の土曜日は行けないよ。","朝からてつだいに行くね。"],
+        explanation: "Yui menjawab bahwa acara dimulai lewat tengah hari sehingga tidak masalah. Berarti Takuya menanyakan apakah boleh datang mulai siang/sore hari."
+      },
+      {
+        id: 24,
+        turns: [["すずき","はるかさん、このコーヒーを作るきかい、使い方がちょっと分からないんですが。"],["はるか","ああ、まずうしろに水を入れて、ここにコーヒーを入れます。"],["すずき","なるほど。＿＿＿＿＿。"],["はるか","ええ、その赤いボタンをおすだけで、すぐできますよ。"]],
+        correct: "そのあと、このボタンをおせばいいんですか。",
+        distractors: ["コーヒーはどこで買えばいいですか。","お湯は自分で作らなければなりませんか。","もうコーヒーはできていますか。"],
+        explanation: "Haruka mengiyakan (「ええ、その赤いボタンをおすだけで...」), yang berarti Suzuki mengonfirmasi apakah langkah selanjutnya cukup menekan tombol tersebut."
+      },
+      {
+        id: 25,
+        turns: [["はるか","すみません、来週の火曜日のよやくを、ほかの日にかえてもいいですか。"],["けんた","はい、いいですよ。いつがいいですか。"],["はるか","木曜日の午後2時はあいていますか。"],["けんた","ちょっとしらべますね。……はい、＿＿＿＿＿。"]],
+        correct: "木曜日の2時ならあいていますよ。",
+        distractors: ["よやくはやめておきますね。","木曜日は一日中いっぱいです。","火曜日の2時にかえました。"],
+        explanation: "Karena diawali dengan 「はい」 setelah mengecek jadwal hari Kamis jam 2 siang, jawaban yang tepat adalah jadwal tersebut kosong/tersedia."
+      },
+      {
+        id: 26,
+        turns: [["はるか","あれ、雨が降ってきましたね。ケンさん、かさを持っていますか。"],["ケン","いいえ、今朝はいい天気だったので、持ってこなかったんです。"],["はるか","わたしは小さいかさがもう1本ありますよ。＿＿＿＿＿。"]],
+        correct: "よかったら、これを使ってください。",
+        distractors: ["かさを貸してもらえませんか。","コンビニへ買いに行きましょう。","雨が止むまで待ちますか。"],
+        explanation: "Haruka mengatakan punya satu payung kecil lagi, sehingga lanjutan paling alami adalah menawarkan payung tersebut kepada Ken."
+      },
+      {
+        id: 27,
+        turns: [["けんた","すみません、このいす、あいていますか。"],["ナオミ","＿＿＿＿＿。友だちが今トイレに行っているんです。"]],
+        correct: "あ、すみません、使っています。",
+        distractors: ["いいえ、だれもいませんよ。","ええ、あいていますよ。","はい、どうぞ使ってください。"],
+        explanation: "Karena temannya sedang ke toilet dan kursi tersebut dipakai, Naomi menolak dengan sopan menggunakan 「あ、すみません、使っています」."
+      },
+      {
+        id: 28,
+        turns: [["はるか","さとうさん、さっきのかいぎのメモ、もうたなかさんに出しましたか。"],["さとう","いいえ、まだです。今、まちがいがないか見ているところです。"],["はるか","あ、よかった。じつは、つぎのかいぎの日が水曜日から木曜日にかわったんです。"],["さとう","えっ、そうなんですか。＿＿＿＿＿。"],["はるか","ええ、出す前にわかってよかったです。"]],
+        correct: "教えてくれてありがとうございます。今すぐなおしますね。",
+        distractors: ["どうしてかいぎに出なかったんですか。","水曜日のままで出してももんだいないと思いますよ。","もうたなかさんに出してしまったのでなおせませんよ。"],
+        explanation: "Sato belum menyerahkan memo rapat ketika Haruka memberi tahu perubahan hari, sehingga Sato berterima kasih atas informasinya dan segera memperbaikinya."
+      },
+      {
+        id: 29,
+        turns: [["ナオミ","たくやさん、来週のテストの勉強、もうしましたか。"],["たくや","じつは、漢字の読み方がよく分からなくてこまっているんです。"],["ナオミ","わたしでよければ、＿＿＿＿＿。"]],
+        correct: "あとでいっしょに勉強しましょうか。",
+        distractors: ["ひとりでがんばってくださいね。","漢字の読み方を教えてもらえませんか。","テストをうけないようにしましょう。"],
+        explanation: "Diawali dengan 「わたしでよければ」 (kalau tidak keberatan dengan saya), maka lanjutan yang tepat adalah menawarkan bantuan untuk belajar bersama."
+      },
+      {
+        id: 30,
+        turns: [["ケン","すみません、このバスはさくら病院に行きますか。"],["やまだ","いいえ、＿＿＿＿＿。あそこのバスていから出るバスに乗ってください。"]],
+        correct: "これは行きませんよ。",
+        distractors: ["はい、つぎのバスていですよ。","病院まで乗せてあげます。","ここで降りないでください。"],
+        explanation: "Karena diawali dengan 「いいえ」 dan diikuti saran untuk naik bus dari halte seberang, kalimat yang tepat adalah memberi tahu bahwa bus ini tidak pergi ke rumah sakit tersebut."
+      },
+      {
+        id: 31,
+        turns: [["ゆい","たなかさん、来週の金曜日、新しい社員のジョンさんの食事会がありますよね。"],["たなか","ええ、駅の近くのレストランでやりますね。"],["ゆい","はい。じつはジョンさん、からい料理がぜんぜん食べられないそうなんです。"],["たなか","えっ、そうなんですか。よやくしたお店はからい料理が多いですよ。"],["ゆい","＿＿＿＿＿。"],["たなか","そうですね。今すぐお店に電話して、からくない料理にできるか聞いてみます。"]],
+        correct: "お店に聞いて、料理をかえてもらえませんか。",
+        distractors: ["もっとからい料理をたくさんたのんでおきましょう。","そのお店はもうきのうやめましたよ。","ジョンさんには食事会に来ないように言いましょう。"],
+        explanation: "Tanaka merespons akan segera menelepon restoran untuk menanyakan apakah bisa diganti masakan tidak pedas, yang sesuai dengan usulan Yui agar menanyakan ke pihak restoran."
+      },
+      {
+        id: 32,
+        turns: [["マリア","すみません、この部屋のエアコンをつけたいんですが。"],["リナ","あ、その部屋のエアコン、きのうから悪くてつかないんです。"],["マリア","えっ、そうなんですか。＿＿＿＿＿。"]],
+        correct: "じゃあ、となりの部屋を使ってもいいですか。",
+        distractors: ["まどを全部開けて寒くしましょうか。","エアコンがついていてとても暖かいですね。","では、わたしがエアコンを買いに行きますね。"],
+        explanation: "Karena AC di ruangan itu rusak sejak kemarin, solusi yang paling logis ditanyakan Maria adalah meminta izin memakai ruangan sebelah."
+      },
+      {
+        id: 33,
+        turns: [["ナオミ","ジョンさん、夏休みは国へ帰るんですか。"],["ジョン","いいえ、今年は休みが短いので、日本の中を旅行しようと思っています。"],["ナオミ","いいですね。どこへ行くかもうきめましたか。"],["ジョン","涼しいところへ行きたいんですが、＿＿＿＿＿。"],["ナオミ","それなら、長野の山はどうですか。風も気もちいいですよ。"]],
+        correct: "どこかいい場所を知りませんか。",
+        distractors: ["南の海でおよぐことにしました。","ホテルのよやくはもう全部終わりました。","暑いところのほうがすきなんですよ。"],
+        explanation: "Naomi menyarankan pegunungan di Nagano pada giliran kelima, yang menunjukkan bahwa John meminta rekomendasi tempat yang sejuk pada giliran keempat."
+      },
+      {
+        id: 34,
+        turns: [["マイク","すずきさん、先週借りた本、とてもおもしろかったです。これ、お返しします。"],["すずき","＿＿＿＿＿。よかったら、またいつでも言ってくださいね。"]],
+        correct: "どういたしまして。",
+        distractors: ["おだいじにしてください。","つまらないものですが。","お借りしますね。"],
+        explanation: "Saat lawan bicara mengembalikan buku sambil menyampaikan kesan dan terima kasih, respons yang tepat adalah 「どういたしまして」."
+      },
+      {
+        id: 35,
+        turns: [["マイク","やまださん、今度の休みに京都へ行くんですが、いい場所はありますか。"],["やまだ","そうですね。今のきせつなら、あらし山がきれいだと思いますよ。"],["マイク","あらし山ですか。＿＿＿＿＿。"],["やまだ","ええ、京都駅から電車で20分ぐらいですから、行きやすいですよ。"]],
+        correct: "京都駅から近くにありますか。",
+        distractors: ["ホテルはどこがいいですか。","どんなおみやげが有名ですか。","入るお金はいくらぐらいですか。"],
+        explanation: "Yamada menjawab bahwa dari Stasiun Kyoto hanya sekitar 20 menit naik kereta dan mudah dikunjungi, sehingga pertanyaan Mike berkaitan dengan jarak dari Stasiun Kyoto."
+      },
+      {
+        id: 36,
+        turns: [["たくや","ゆいさん、このたいせつな手紙、たなかさんのつくえの上においておいてもいいですか。"],["ゆい","それは大事な手紙だから、＿＿＿＿＿。"],["たくや","わかりました。じゃあ、たなかさんが帰ってくるのを待ちます。"]],
+        correct: "会ってじぶんの手で渡したほうがいいですよ。",
+        distractors: ["つくえの中に入れておきましょう。","わたしがメールで送っておきますよ。","ごみばこにすてておいてくださいね。"],
+        explanation: "Takuya memutuskan untuk menunggu Tanaka kembali, yang sesuai dengan saran Yui agar surat penting tersebut diserahkan langsung saat bertemu."
+      },
+      {
+        id: 37,
+        turns: [["あおい","たくやくん、そのカメラ、新しく買ったの？"],["たくや","ううん、兄が新しいのを買ったから、古いのをもらったんだ。"],["あおい","へえ、いいね。＿＿＿＿＿。"],["たくや","うん、ちょっと重いけど、すごくきれいな写真がとれるんだよ。"]],
+        correct: "使ってみてどうだった？",
+        distractors: ["お兄さんにあげたの？","どこのお店でなおしたの？","いくらで買ったの？"],
+        explanation: "Takuya menjelaskan kesan setelah mencobanya (agak berat, tetapi bisa mengambil foto yang sangat bagus), sehingga pertanyaan Aoi adalah menanyakan bagaimana rasanya setelah dipakai."
+      },
+      {
+        id: 38,
+        turns: [["さとう","ケンさん、先週おねがいした新しいパンフレット、もう届いていますか。"],["ケン","すみません、さっき聞いたら、明日の午前中に届くそうです。"],["さとう","そうですか。明日の午後、おきゃくさんに渡したいんですが、まにあいますかね。"],["ケン","＿＿＿＿＿。"]],
+        correct: "届いたらすぐさとうさんのつくえに持っていきますね。",
+        distractors: ["パンフレットはもう全部使ってしまいましたよ。","明日の午後は会社が休みだったと思いますよ。","じゃあ、来週になってから渡しますね。"],
+        explanation: "Sato ingin menyerahkan pamflet itu kepada tamu besok siang, sedangkan pamflet tiba besok pagi. Maka Ken menjanjikan akan langsung membawanya ke meja Sato begitu tiba."
+      },
+      {
+        id: 39,
+        turns: [["ゆい","もしもし、ゆいですが。すみません、そちらの店のよやくを3時からおねがいしていたんですが。"],["さくら","はい、ゆいさまですね。どうしましたか。"],["ゆい","すみません、電車がじこで止まってしまって、＿＿＿＿＿。"],["さくら","そうでしたか。3時半までに来られれば、だいじょうぶですよ。"],["ゆい","ありがとうございます。バスに乗って行きます。"]],
+        correct: "3時にまにあわないかもしれないんです。",
+        distractors: ["よやくを来週の月曜日にかえてください。","もうお店の前に着いているんですが。","今日行くのをやめにしたいんですが。"],
+        explanation: "Kereta berhenti karena kecelakaan dan staf toko mengatakan jika bisa datang sebelum 3.30 masih bisa, sehingga Yui memberi tahu bahwa ia mungkin tidak sempat tiba jam 3."
+      },
+      {
+        id: 40,
+        turns: [["はな","すみません、＿＿＿＿＿。"],["けんた","はい、100円を10枚ですね。どうぞ。"],["はな","ありがとうございます。たすかりました。"]],
+        correct: "1000円を小さいお金にかえてもらえませんか。",
+        distractors: ["このかばんを返したいんですが。","名前を書いてもらえませんか。","カードで払ってもいいですか。"],
+        explanation: "Kenta memberikan 10 keping uang 100 yen (total 1000 yen), sehingga pada kalimat pertama Hana meminta penukaran uang 1000 yen menjadi uang receh."
+      },
+      {
+        id: 41,
+        turns: [["マイク","すみません、この近くに自転車を止めるところはありますか。"],["さくら","この建物のうしろに止めるところがありますよ。"],["マイク","ありがとうございます。＿＿＿＿＿。"],["さくら","はじめの2時間はただで、そのあとは100円かかります。"]],
+        correct: "お金はかかりますか。",
+        distractors: ["建物のうしろはどこですか。","何時まであいていますか。","自転車を借りられますか。"],
+        explanation: "Sakura menjawab bahwa 2 jam pertama gratis (ただ) dan setelahnya dikenakan 100 yen, sehingga pertanyaan Mike adalah menanyakan apakah tempat parkir sepeda itu berbayar."
+      },
+      {
+        id: 42,
+        turns: [["たろう","さくらさん、今度の休みはどこかへ出かけるんですか。"],["さくら","いいえ、休みはどこも人が多いですから、＿＿＿＿＿。"],["たろう","それもいいですね。わたしも家で映画を見るつもりです。"]],
+        correct: "家でゆっくり本でも読もうと思っています。",
+        distractors: ["友だちと海へあそびに行きます。","毎日会社へ来て仕事をするつもりです。","有名な町へ旅行に行くよていです。"],
+        explanation: "Sakura menyebutkan alasan bahwa saat libur di mana-mana banyak orang, dan Taro menimpali ia juga berniat menonton film di rumah. Berarti Sakura memilih bersantai membaca buku di rumah."
+      },
+      {
+        id: 43,
+        turns: [["さくら","やまださん、さっきの電話、だれからでしたか。"],["やまだ","あ、荷物を運ぶ会社からでした。今日届くよていの荷物が、ゆきが多いので明日になるそうです。"],["さくら","そうですか。＿＿＿＿＿。"]],
+        correct: "今日すぐ使うものではないので、明日でもだいじょうぶですよ。",
+        distractors: ["今日の午前中に届いてよかったですね。","今すぐその会社へとりに行きましょう。","ゆきが降っていないのにおかしいですね。"],
+        explanation: "Yamada menyampaikan bahwa paket terlambat menjadi besok karena salju, dan Sakura menanggapi bahwa barang itu tidak langsung dipakai hari ini sehingga besok pun tidak apa-apa."
+      },
+      {
+        id: 44,
+        turns: [["ジョン","すみません、このアパートのごみを出す場所はどこにありますか。"],["はな","1階の入口のよこにありますよ。今日ひっこしてきたんですか。"],["ジョン","はい、203の部屋のジョンです。よろしくおねがいします。"],["はな","私は204の部屋のはなです。＿＿＿＿＿。"],["ジョン","ありがとうございます。分からないことがあったら、また教えてください。"]],
+        correct: "となりの部屋ですね。こちらこそよろしくおねがいします。",
+        distractors: ["203の部屋にはだれも住んでいないはずですよ。","もうすぐこのアパートから出ていくんですよ。","ごみはいつでもすきなときに出していいんですよ。"],
+        explanation: "John tinggal di kamar 203 dan Hana di kamar 204, sehingga Hana menyadari mereka bertetangga dan membalas salam perkenalan dengan ramah."
+      },
+      {
+        id: 45,
+        turns: [["ナオミ","やまださん、来週の会社の勉強会のメール、もう見ましたか。"],["やまだ","ええ、見ましたよ。水曜日の午後1時からでしたよね。"],["ナオミ","はい。それで、持ってくるものに『ペンとテキスト』と書いてあったんですが。"],["やまだ","テキストですか。＿＿＿＿＿。"],["ナオミ","いえ、わたしもまだもらっていないんです。たなかさんに聞けばいいでしょうか。"],["やまだ","そうですね。ちょっとたなかさんに電話で聞いてみましょう。"]],
+        correct: "あれ、テキストはもうもらいましたか。",
+        distractors: ["テキストならきのうのうちに全部読み終わりましたよ。","勉強会は来月になったと聞きましたよ。","ペンは持っていくひつようがないそうですよ。"],
+        explanation: "Naomi menjawab 'Tidak, saya juga belum menerimanya', sehingga pertanyaan Yamada pada giliran keempat adalah menanyakan apakah buku materinya (テキスト) sudah diterima."
+      },
+      {
+        id: 46,
+        turns: [["あおい","すみません、ケーキを4つ買いたいんですが、家まで1時間ぐらいかかります。"],["たなか","かしこまりました。＿＿＿＿＿。"],["あおい","はい、おねがいします。ありがとうございます。"]],
+        correct: "では、つめたくするものを入れておきますね。",
+        distractors: ["ケーキはあたためてから渡しますね。","1時間ぐらいに全部食べてくださいね。","それなら、この店の中で食べてください。"],
+        explanation: "Saat membeli kue dengan perjalanan pulang sekitar 1 jam, staf toko menawarkan untuk memasukkan pendingin ke dalam kemasan."
+      },
+      {
+        id: 47,
+        turns: [["リナ","マリアさん、今度の日本語の試験、うけるんですか。"],["マリア","はい、うけるつもりです。でも、聞くもんだいがむずかしくてしんぱいなんです。"],["リナ","わたしも前は聞くのがむずかしかったですよ。＿＿＿＿＿。"],["マリア","毎日少しずつ聞くのが大事なんですね。今日からやってみます。"]],
+        correct: "でも、毎日日本のニュースを聞くようにしたら、だんだん分かるようになりましたよ。",
+        distractors: ["試験の前の日に一日中勉強すれば、すぐ上手になりますよ。","漢字の練習だけしていれば、聞くもんだいもできるようになりますよ。","だから、聞く練習はぜんぜんしなくてもだいじょうぶでしたよ。"],
+        explanation: "Maria menyimpulkan bahwa mendengarkan sedikit demi sedikit setiap hari itu penting, yang merujuk pada pengalaman Rina membiasakan diri mendengarkan berita Jepang setiap hari."
+      },
+      {
+        id: 48,
+        turns: [["ケン","はるかさん、来週の月曜日のアルバイト、ぼくのかわりに出てもらえませんか。"],["はるか","月曜日ですか。＿＿＿＿＿。"],["ケン","学校の試験が急に入ってしまって、休まないといけないんです。"]],
+        correct: "休みですけど、どうしたんですか。",
+        distractors: ["いいですよ、何時から働けばいいですか。","アルバイトはもうやめたんじゃありませんか。","すみません、月曜日は用事があるんです。"],
+        explanation: "Pada giliran ketiga Ken menjelaskan alasan mengapa ia harus libur (ada ujian sekolah mendadak), sehingga pada giliran kedua Haruka menanyakan apa yang terjadi (「どうしたんですか」)."
+      },
+      {
+        id: 49,
+        turns: [["リナ","マイクさん、土曜日のサッカーのしあい、見に行きますか。"],["マイク","ええ、もちろん行きますよ。リナさんも行くんですか。"],["リナ","はい、はじめて見に行くんですが、なにか持っていくといいものはありますか。"],["マイク","そうですね。夕方は風がつめたくなるから、＿＿＿＿＿。"],["リナ","なるほど。じゃあ、暖かい上着をかばんに入れていきますね。"]],
+        correct: "上に着るものを持っていったほうがいいですよ。",
+        distractors: ["つめたい飲み物をたくさん買ったほうがいいですよ。","かさは重くなるからおいていったほうがいいですよ。","うすいシャツだけでだいじょうぶだと思いますよ。"],
+        explanation: "Mike menjelaskan bahwa sore hari angin menjadi dingin, dan Rina merespons akan membawa jaket hangat, sehingga saran Mike adalah membawa pakaian luar."
+      },
+      {
+        id: 50,
+        turns: [["マリア","あおいさん、かぜはどうですか。もうねつは下がりましたか。"],["あおい","はい、＿＿＿＿＿、すっかりよくなりました。"]],
+        correct: "おかげさまで。",
+        distractors: ["おだいじに。","ごめんなさい。","お元気で。"],
+        explanation: "Ungkapan 「おかげさまで」 digunakan saat menjawab pertanyaan tentang kondisi kesehatan yang sudah membaik berkat perhatian lawan bicara."
+      },
+      {
+        id: 51,
+        turns: [["ナオミ","すみません、きのう買ったこのシャツを、とりかえてもらえませんか。"],["たろう","かしこまりました。どうしましたか。"],["ナオミ","家で着てみたんですが、＿＿＿＿＿。レシートはこれです。"],["たろう","そうでしたか。同じ色の大きいサイズがありますが、いかがですか。"]],
+        correct: "思ったより少し小さかったんです。",
+        distractors: ["よごれていたところがあったんです。","同じものを二つ買ってしまって。","色がすきじゃなかったんです。"],
+        explanation: "Pada giliran keempat, pelayan toko menawarkan ukuran yang lebih besar dengan warna yang sama, sehingga alasan Naomi adalah ukurannya lebih kecil dari perkiraan."
+      },
+      {
+        id: 52,
+        turns: [["はな","あ、ケンさん、その手、どうしたんですか。白いテープがついていますね。"],["ケン","きのうの夜、料理をしているときに少し切ってしまったんです。"],["はな","えっ、だいじょうぶですか。病院へは行きましたか。"],["ケン","＿＿＿＿＿。もう痛くもありませんよ。"],["はな","そうですか。でも、水を使うときは気をつけてくださいね。"]],
+        correct: "少し切っただけなので、家で薬をつけただけです。",
+        distractors: ["ええ、病院で1週間休みました。","今から病院へ行こうと思っています。","痛くてなにも持つことができないんです。"],
+        explanation: "Ken mengatakan sudah tidak sakit lagi, sehingga ia menjelaskan bahwa lukanya hanya teriris sedikit dan cukup diberi obat di rumah tanpa ke rumah sakit."
+      },
+      {
+        id: 53,
+        turns: [["ゆい","すみません、この近くに花屋はありますか。"],["たくや","花屋ですか。＿＿＿＿＿。あそこのこうばんで聞いてみてください。"]],
+        correct: "すみません、このへんはあまり分からないんです。",
+        distractors: ["ええ、毎日その花屋で買っています。","花屋なら、わたしがあんないしてあげますよ。","はい、駅のすぐとなりにありますよ。"],
+        explanation: "Karena Takuya menyarankan untuk bertanya di pos polisi (こうばん), berarti ia sendiri kurang mengenal daerah sekitar situ."
+      },
+      {
+        id: 54,
+        turns: [["はな","先生、来週話すスピーチの文を書いたんですが、見ていただけませんか。"],["たなか","いいですよ。何について書いたんですか。"],["はな","日本の電車とわたしの国の電車のちがいについて書きました。"],["たなか","おもしろいですね。＿＿＿＿＿。"]],
+        correct: "では、明日までに読んでおきますね。",
+        distractors: ["文はまだ書かないでください。","スピーチは先週もう終わりましたよ。","わたしが全部書いてあげますね。"],
+        explanation: "Hana meminta guru memeriksa teks pidatonya. Setelah menanyakan topik dan memujinya, guru menyanggupi untuk membacanya sampai besok."
+      },
+      {
+        id: 55,
+        turns: [["たなか","ユミさん、さっきおねがいしたかいぎのコピー、もう終わりましたか。"],["ユミ","すみません、コピーの紙がなくなってしまって、＿＿＿＿＿。"],["たなか","そうですか。新しい紙はあのつくえの下にありますよ。"]],
+        correct: "まだ半分しかできていないんです。",
+        distractors: ["コピーのきかいが動きません。","もう全部つくえの上におきました。","紙の場所が分かりました。"],
+        explanation: "Karena kertas habis di tengah jalan, pekerjaan belum selesai seluruhnya. Tanaka kemudian memberi tahu tempat kertas baru."
+      },
+      {
+        id: 56,
+        turns: [["リナ","すずきさん、ちょっといいですか。来週京都へ仕事で行くときのホテルをさがしているんですが。"],["すずき","ああ、来週の京都ですね。いいホテルがありましたか。"],["リナ","駅の近くに二つあるんですが、＿＿＿＿＿。"],["すずき","そうですね。会社のきまりで1晩8000円までとなっていますから、安いほうにしましょう。"],["リナ","わかりました。では、7500円のホテルをよやくしますね。"]],
+        correct: "少し高いほうと安いほう、どちらがいいですか。",
+        distractors: ["どちらも人がいっぱいでよやくできなかったんですが。","京都にはホテルが一つもないんです。","京都へは行かないことになりましたよ。"],
+        explanation: "Suzuki menjawab bahwa aturan perusahaan membatasi biaya maksimal 8000 yen per malam dan meminta memilih yang lebih murah, sehingga Rina menanyakan pilihan antara hotel yang agak mahal dan yang murah."
+      },
+      {
+        id: 57,
+        turns: [["ケン","あおいさん、英語の手紙の書き方を教えてほしいんですが、今お時間ありますか。"],["あおい","すみません、今から昼休みまでかいぎがあるんです。＿＿＿＿＿。"],["ケン","あ、明日のお昼までに書ければいいので、いそぎませんよ。"],["あおい","それなら、昼休みが終わってからいっしょに見ましょう。"]],
+        correct: "今すぐ書かないといけませんか。",
+        distractors: ["今すぐここで書きましょうか。","ほかの人に聞いてくれませんか。","英語はぜんぜん分からないんですよ。"],
+        explanation: "Ken menjawab bahwa selesai sampai besok siang pun tidak apa-apa dan tidak buru-buru, sehingga pertanyaan Aoi sebelumnya adalah memastikan apakah harus ditulis sekarang juga."
+      },
+      {
+        id: 58,
+        turns: [["ソラ","すみません、この図書館でパソコンを使ってもいいですか。"],["やまだ","はい、使えますが、＿＿＿＿＿。"],["ソラ","わかりました。じゃあ、あそこのうけつけで名前を書きますね。"]],
+        correct: "使う前に、うけつけで名前を書いてください。",
+        distractors: ["なにも書かなくてそのまま使えますよ。","パソコンは持ってこないでください。","今日は図書館が休みで使えません。"],
+        explanation: "Sora merespons akan menulis namanya di resepsionis, sehingga Yamada menjelaskan bahwa sebelum memakai laptop, pengunjung perlu menulis nama di resepsionis."
+      },
+      {
+        id: 59,
+        turns: [["はるか","あ、すみません、ハンカチがおちましたよ。"],["ケン","えっ、あ、ほんとうだ。＿＿＿＿＿。"]],
+        correct: "教えてくれて、ありがとうございます。",
+        distractors: ["おとさないように気をつけてくださいね。","いいえ、わたしのハンカチではありません。","どうぞ、そのまま使ってください。"],
+        explanation: "Ken menyadari bahwa saputangannya benar-benar jatuh (「あ、ほんとうだ」), sehingga ia mengucapkan terima kasih karena sudah diberi tahu."
+      },
+      {
+        id: 60,
+        turns: [["ユミ","先生、来週の金曜日ですが、国から両親が来るので、じゅぎょうを休んでもいいですか。"],["たなか","ご両親がいらっしゃるんですね。いいですよ。"],["ユミ","ありがとうございます。金曜日に小さいテストがあると聞いたんですが、＿＿＿＿＿。"],["たなか","月曜日のじゅぎょうのあとにうけられますから、しんぱいしないでください。"]],
+        correct: "別の日にうけることはできますか。",
+        distractors: ["テストはうけなくてもいいですか。","両親もいっしょにテストをうけますか。","金曜日のじゅぎょうに出ますね。"],
+        explanation: "Guru menjawab bahwa kuis dapat diikuti setelah pelajaran hari Senin, sehingga pertanyaan Yumi adalah apakah ia bisa mengikuti kuis di hari lain."
+      },
+      {
+        id: 61,
+        turns: [["ソラ","すみません、電車の切符をなくしてしまったみたいなんですが、どうすればいいですか。"],["やまだ","どの駅から乗りましたか。"],["ソラ","みどり駅からです。かばんの中をさがしたんですが、なくて……。"],["やまだ","そうですか。＿＿＿＿＿。もしあとで見つかったら、お金を返しますよ。"],["ソラ","わかりました。おねがいします。"]],
+        correct: "では、もう一度みどり駅からのお金を払ってください。",
+        distractors: ["それなら、今日はお金を払わなくてもいいですよ。","切符がない人は電車から出ることができませんよ。","今すぐみどり駅まで帰ってさがしてきてください。"],
+        explanation: "Petugas stasiun menjelaskan prosedur kehilangan tiket (membayar kembali ongkos dari stasiun keberangkatan, dan jika nanti ketemu uangnya akan dikembalikan)."
+      },
+      {
+        id: 62,
+        turns: [["すずき","やまださん、来週の月曜日から新しいアルバイトの人が来ますよ。"],["やまだ","そうですか。＿＿＿＿＿。"]],
+        correct: "どんな人が来るか楽しみですね。",
+        distractors: ["アルバイトをやめることになりました。","先週からもう働いていますよ。","長い間おせわになりました。"],
+        explanation: "Mendengar kabar bahwa pekerja paruh waktu baru akan datang minggu depan, respons yang alami adalah menantikan orang seperti apa yang akan datang."
+      },
+      {
+        id: 63,
+        turns: [["ミカ","すみません、こちらの病院へ来るのははじめてなんですが。"],["たろう","いらっしゃいませ。病院のカードかほけんのカードはありますか。"],["ミカ","はい、これです。きのうからねつとせきが出るんです。"],["たろう","おあずかりします。では、この紙にいつから悪いかと、今のねつを書いてください。"],["ミカ","＿＿＿＿＿。"],["たろう","はい、これでねつをはかって、終わったら教えてくださいね。"]],
+        correct: "あのう、今朝家でねつをはかるのをわすれてしまったんですが。",
+        distractors: ["今朝はかったらねつはぜんぜんありませんでした。","薬だけもらえればいいので、医者には会わなくていいです。","この紙はもう家で全部書いて持ってきていますよ。"],
+        explanation: "Pada giliran keenam petugas memberikan alat pengukur suhu dan meminta Mika memberi tahu setelah selesai, yang menunjukkan bahwa pada giliran kelima Mika mengatakan lupa mengukur suhu badan di rumah."
+      },
+      {
+        id: 64,
+        turns: [["さとう","リナさん、さっきおきゃくさんから電話があって、パンの数を20個から30個にかえたいそうです。"],["リナ","えっ、30個ですか。ちょっと店の中にいくつあるか見てきますね。"],["さとう","＿＿＿＿＿。"],["リナ","はい、まだ50個ありましたから、だいじょうぶです。"]],
+        correct: "どうですか、30個ありそうですか。",
+        distractors: ["20個送ってしまいましたか。","だれから電話がありましたか。","いつ買いに行けばいいですか。"],
+        explanation: "Setelah Rina mengecek jumlah roti di dalam toko, Sato menanyakan apakah ada 30 buah, dan Rina menjawab masih ada 50 buah."
+      },
+      {
+        id: 65,
+        turns: [["さくら","マイクさん、日本の生活にはもうなれましたか。"],["マイク","ええ、だいぶなれましたが、ごみの出し方がまだ少しむずかしいです。"],["さくら","＿＿＿＿＿。市のホームページに英語のせつめいもありますよ。"]],
+        correct: "はじめはおぼえるのがたいへんですよね。",
+        distractors: ["もうすぐ国へ帰りますね。","ごみをすててはいけませんよ。","日本語がとても上手ですね。"],
+        explanation: "Sakura menunjukkan empati terhadap kesulitan Mike dalam membuang sampah dengan mengatakan bahwa awalnya memang sulit diingat, lalu memberi informasi penjelasan bahasa Inggris."
+      },
+      {
+        id: 66,
+        turns: [["やまだ","すみません、この近くに銀行はありますか。"],["あおい","銀行は遠いですけど、あそこのコンビニでお金が出せますよ。"],["やまだ","ありがとうございます。＿＿＿＿＿。"],["あおい","ええ、夜でも朝でも、いつでも使えますよ。"]],
+        correct: "夜遅くでも使えますか。",
+        distractors: ["お金はいくらかかりますか。","どこの銀行のカードですか。","コンビニで何を売っていますか。"],
+        explanation: "Aoi menjawab bahwa malam maupun pagi bisa dipakai kapan saja, maka pertanyaan Yamada berkaitan dengan apakah mesin di minimarket itu bisa digunakan larut malam."
+      },
+      {
+        id: 67,
+        turns: [["ソラ","ユミさん、今晩の食事会、ユミさんも行きますよね。"],["ユミ","それが、急に国からあねが来ることになって、＿＿＿＿＿。"],["ソラ","そうなんですか。ざんねんですが、また今度行きましょう。"]],
+        correct: "行けなくなってしまったんです。",
+        distractors: ["とても楽しみにしているんです。","あねもいっしょにつれていきますよ。","一番さきにお店へ行きますね。"],
+        explanation: "Sora mengatakan 'Sayang sekali, tapi lain kali ayo pergi lagi', yang menunjukkan bahwa Yumi tidak jadi ikut karena kakaknya mendadak datang dari negaranya."
+      },
+      {
+        id: 68,
+        turns: [["たくや","すみません、このせんたくのきかい、お金を入れても動かないんですが。"],["はな","あ、ほんとうですね。上のドアがちゃんと閉まっていないのかもしれません。"],["たくや","もう一度閉めてみますね。……あ、＿＿＿＿＿。"],["はな","よかったです。ちゃんと閉めないと動かないんですよ。"]],
+        correct: "動き始めました！ありがとうございます。",
+        distractors: ["お金がでてきてしまいました。","やっぱりわるくなっているみたいですね。","ドアが開かなくなってしまいました。"],
+        explanation: "Hana berkata 「よかったです」 (Syukurlah) dan menjelaskan bahwa mesin baru bergerak jika ditutup rapat, sehingga Takuya pasti berhasil menyalakan mesin cuci tersebut."
+      },
+      {
+        id: 69,
+        turns: [["リナ","すみません、駅前の郵便局へはどう行けばいいですか。"],["たろう","この道をまっすぐ行って、二つ目のかどを右にまがるとありますよ。"],["リナ","二つ目のかどを右ですね。＿＿＿＿＿。"]],
+        correct: "歩いてどのくらいかかりますか。",
+        distractors: ["切手を買いに行きたいんです。","道をおしえてあげましょうか。","郵便局は何時に閉まりますか。"],
+        explanation: "Setelah mengonfirmasi arah jalan, pertanyaan lanjutan yang paling natural terkait rute adalah menanyakan perkiraan waktu tempuh berjalan kaki."
+      },
+      {
+        id: 70,
+        turns: [["ユミ","あ、もう10時ですね。電車の時間があるので、＿＿＿＿＿。"],["さとう","そうですか。気をつけて帰ってくださいね。"]],
+        correct: "そろそろしつれいします。",
+        distractors: ["ごちそうさまでした。","おさきにどうぞ。","おじゃまします。"],
+        explanation: "Ungkapan 「そろそろしつれいします」 digunakan saat berpamitan pulang karena waktu sudah malam atau harus mengejar kereta."
+      },
+      {
+        id: 71,
+        turns: [["マリア","すみません、このアパートの部屋を見たいんですが。"],["けんた","いらっしゃいませ。駅前の1階の部屋ですね。"],["マリア","はい。お金も安いし、駅からも近いのでいいなと思ったんです。"],["けんた","ありがとうございます。でも、＿＿＿＿＿。今から見に行きますか。"],["マリア","ええ、ぜひ見てみたいです。おねがいします。"]],
+        correct: "北の部屋なので、昼でも少し暗いかもしれません。",
+        distractors: ["かぎをなくしてしまったので入れないんです。","駅から歩いて1時間もかかる不便な場所ですよ。","もうほかの人が住むことになったので見られません。"],
+        explanation: "Kata penghubung 「でも、」 digunakan petugas untuk menyampaikan satu kekurangan ruangan (menghadap utara sehingga siang hari pun agak gelap) sebelum mengajak melihatnya."
+      },
+      {
+        id: 72,
+        turns: [["ミカ","＿＿＿＿＿。ミカですが。"],["けんた","いらっしゃいませ。ミカさまですね。2名さまでまどの近くのおせきですね。"],["ミカ","すみません、友だちがもう一人来て、3人になったんですが。"],["けんた","かしこまりました。では、あちらの大きいテーブルへどうぞ。"]],
+        correct: "こんばんは、7時からよやくしているんですが。",
+        distractors: ["すみません、今日のよやくをやめたいんですが。","こんにちは、おべんとうを買って帰りたいんですが。","あのう、お金を払いたいんですが。"],
+        explanation: "Pelayan menyambut Mika dan mengonfirmasi meja untuk 2 orang di dekat jendela, sehingga ucapan pembuka Mika adalah saat tiba di restoran dengan menyebutkan reservasinya."
+      },
+      {
+        id: 73,
+        turns: [["ジョン","はるかさん、日本語のじしょを買いたいんですが、本とスマホと、どちらがいいと思いますか。"],["はるか","そうですね。わたしはスマホのほうが便利だと思いますよ。"],["ジョン","どうしてですか。"],["はるか","＿＿＿＿＿。"]],
+        correct: "いつも持っているから、すぐしらべられるでしょう。",
+        distractors: ["スマホは小さくて読みにくいですよ。","本のじしょのほうが軽くて持ちやすいですからね。","本のじしょが一番見やすいと思いますよ。"],
+        explanation: "Haruka merekomendasikan kamus di smartphone dibanding buku kamus, sehingga alasannya menyebutkan keunggulan smartphone (selalu dibawa dan bisa langsung dicek)."
+      },
+      {
+        id: 74,
+        turns: [["ケン","さとうさん、この近くでお昼ご飯を食べるなら、どこがいいですか。"],["さとう","そうですね。安くて多いのは、駅のうしろにある『さくら食堂』ですよ。"],["ケン","いいですね。どんな料理があるんですか。"],["さとう","＿＿＿＿＿。"],["ケン","わあ、おいしそうですね。今日はそこへ行ってみます。"]],
+        correct: "肉や魚のセットがあって、ご飯もたくさん食べられますよ。",
+        distractors: ["ねだんがすごく高くて、よやくしないと入れないお店です。","先月閉まってしまったので、今はもうやっていませんよ。","コーヒーとパンしかおいていない小さなお店ですよ。"],
+        explanation: "Ken menanyakan masakan di rumah makan murah dan porsi banyak tersebut, lalu tertarik pergi ke sana, sehingga Sato menyebutkan paket daging atau ikan dengan nasi yang banyak."
+      },
+      {
+        id: 75,
+        turns: [["ケン","すみません、頭が痛くて少しねつがあるので、＿＿＿＿＿。"],["たなか","それはいけませんね。むりをしないで、すぐ帰って休んでください。"],["ケン","ありがとうございます。おさきにしつれいします。"]],
+        correct: "今日は早く帰ってもいいですか。",
+        distractors: ["仕事をてつだいましょうか。","明日も会社へ来てもいいですか。","薬を買いに行ってきてくれませんか。"],
+        explanation: "Ken merasa sakit kepala dan agak demam, lalu Tanaka menyuruhnya segera pulang dan istirahat. Berarti Ken meminta izin pulang lebih awal."
+      },
+      {
+        id: 76,
+        turns: [["たろう","あれ、ミカさん、どうしたんですか。かおの色が悪いですよ。"],["ミカ","朝から少し頭が痛くて、気もちが悪いんです。"],["たろう","たいへんですね。＿＿＿＿＿。"],["ミカ","ありがとうございます。じゃあ、少しだけあちらの部屋で休ませてください。"]],
+        correct: "あちらの部屋へ行って少し休みましょうか。",
+        distractors: ["かおの色がとてもよくなりましたね。","もっと仕事をがんばってください。","今からかいぎを始めましょうか。"],
+        explanation: "Mika berterima kasih dan meminta izin beristirahat sebentar di ruangan sebelah, sehingga kalimat Taro adalah menyarankan beristirahat."
+      },
+      {
+        id: 77,
+        turns: [["ユミ","すみません、この料理教室にまいしゅう通いたいんですが。"],["たくや","ありがとうございます。はじめてのクラスと、料理になれた人のクラスがありますが、どちらがいいですか。"],["ユミ","かんたんな野菜の料理は作れますが、魚を切ったことがないんです。"],["たくや","＿＿＿＿＿。魚の洗い方や切り方から練習しますよ。"],["ユミ","そうですか。じゃあ、そのクラスでおねがいします。"]],
+        correct: "それなら、はじめてのクラスのほうがいいですね。",
+        distractors: ["では、魚を買うところから始めましょう。","どちらのクラスもむずかしすぎると思いますよ。","野菜の料理が作れないなら、なれた人のクラスですね。"],
+        explanation: "Yumi belum pernah memotong ikan, sehingga staf menyarankan kelas pemula karena di kelas itu akan berlatih dari cara mencuci dan memotong ikan."
+      },
+      {
+        id: 78,
+        turns: [["リナ","＿＿＿＿＿。さっきからさがしているんですが、どこにもなくて。"],["マイク","えっ、かいぎ室にわすれてきたんじゃないですか。"],["リナ","あ、そうかもしれません。ちょっと見てきます。"]],
+        correct: "あれ、わたしの黒いペンを見ませんでしたか。",
+        distractors: ["かいぎ室のドアはもう閉めましたか。","マイクさんの時計、どこにありますか。","新しいかばんを買おうと思うんですが。"],
+        explanation: "Rina mengatakan sudah mencarinya sejak tadi tetapi tidak ada, dan Mike menduga benda itu tertinggal di ruang rapat. Jadi kalimat pertama Rina menanyakan apakah Mike melihat pulpen hitamnya."
+      },
+      {
+        id: 79,
+        turns: [["あおい","すみません、ランチのセットを二つください。"],["けんた","かしこまりました。飲み物はコーヒーとこうちゃがありますが、＿＿＿＿＿。"],["あおい","じゃあ、あたたかいコーヒーを二つおねがいします。"]],
+        correct: "どちらにしますか。",
+        distractors: ["お水を持ってきましょうか。","お金は別々に払いますか。","これだけでいいですか。"],
+        explanation: "Pelayan menyebutkan pilihan kopi atau teh, lalu menanyakan pilihan pelanggan dengan 「どちらにしますか」."
+      },
+      {
+        id: 80,
+        turns: [["マリア","あおいさん、きのうはすてきなプレゼントをありがとうございました。"],["あおい","いいえ。＿＿＿＿＿。"]],
+        correct: "よろこんでもらえて、うれしいです。",
+        distractors: ["また来年もよろしくおねがいします。","プレゼントをえらんでくれてありがとう。","たんじょうびは、いつでしたか。"],
+        explanation: "Ketika penerima hadiah mengucapkan terima kasih atas hadiah yang diberikan, pemberi hadiah merespons dengan senang karena hadiahnya disukai."
+      },
+      {
+        id: 81,
+        turns: [["あおい","たくやくん、さっき言っていた映画の切符、もう買った？"],["たくや","ううん、まだだよ。これからコンビニへ買いに行くところ。"],["あおい","＿＿＿＿＿。"],["たくや","ほんとう？じゃあ、ぼくの分とあわせて2枚買ってきてくれる？お金は今渡すよ。"]],
+        correct: "わたしも行くから、いっしょに買ってこようか。",
+        distractors: ["映画はもう見に行かないことにしたよ。","インターネットで買ったほうが安いよ。","コンビニの場所を教えてくれない？"],
+        explanation: "Takuya merespons 'Benarkah? Kalau begitu tolong belikan 2 lembar sekalian punyaku', yang berarti Aoi menawarkan untuk membelikan tiket saat pergi ke minimarket."
+      },
+      {
+        id: 82,
+        turns: [["ジョン","すみません、かぜの薬がほしいんですが、どれがいいですか。"],["ナオミ","こちらの白い薬がよくききますよ。でも、＿＿＿＿＿。"],["ジョン","あ、これから車をうんてんするので、ねむくならない薬はありますか。"]],
+        correct: "飲むと少しねむくなることがあります。",
+        distractors: ["一日三回、ご飯のあとに水で飲んでください。","子どもには飲ませないようにしてください。","ねだんが少し高くなってしまいますよ。"],
+        explanation: "John merespons bahwa ia akan menyetir mobil dan menanyakan apakah ada obat yang tidak membuat mengantuk, sehingga penjelasan Naomi sebelumnya pasti tentang efek mengantuk."
+      },
+      {
+        id: 83,
+        turns: [["ソラ","すみません、このパソコンを見てもらいたいんですが。"],["けんた","どうしましたか。"],["ソラ","きのうの夜から、ボタンをおしても電気がつかないんです。"],["けんた","電気のコードはつないでみましたか。"],["ソラ","＿＿＿＿＿。"]],
+        correct: "はい、きのうの夜からずっとつないでいるんですが、つかないんです。",
+        distractors: ["電気のコードははじめからパソコンについていませんよ。","いいえ、パソコンはとても明るくついていますよ。","ええ、ボタンをおしたらすぐに使えるようになりました。"],
+        explanation: "Staf menanyakan apakah sudah mencoba menyambungkan kabel listrik/charger, dan Sora menjelaskan bahwa sudah disambungkan sejak tadi malam tetapi tetap tidak menyala."
+      },
+      {
+        id: 84,
+        turns: [["マリア","すずきさん、来月の会社の旅行、すずきさんは行きますか。"],["すずき","ええ、行くつもりですよ。マリアさんは？"],["マリア","わたしはまだまよっているんです。＿＿＿＿＿。"],["すずき","みんなでバスに乗って有名な場所を回るから、とても楽しいと思いますよ。"]],
+        correct: "会社の旅行に行ったことがあまりなくて。",
+        distractors: ["来月は毎日仕事が休みですから。","旅行のお金を払いたくないんです。","もう行くと返事をしてしまいましたから。"],
+        explanation: "Suzuki meyakinkan bahwa perjalanan bersama naik bus mengelilingi tempat terkenal itu menyenangkan. Ini cocok dengan keraguan Maria yang belum pernah/jarang ikut tamasya perusahaan."
+      },
+      {
+        id: 85,
+        turns: [["けんた","すみません、そこにあるミルクをとってもらえませんか。"],["はな","はい、どうぞ。……あ、＿＿＿＿＿。"],["けんた","ほんとうですね。じゃあ、新しいのを出してください。"]],
+        correct: "もうすこししか入っていないですね。",
+        distractors: ["まだたくさん入っていますね。","テーブルの上においてありますよ。","これはミルクではありませんよ。"],
+        explanation: "Kenta meminta Hana mengeluarkan yang baru (「新しいのを出してください」), yang menunjukkan bahwa susu (ミルク) di wadah tersebut tinggal sedikit."
+      },
+      {
+        id: 86,
+        turns: [["ケン","すみません、きのうここで黒いかさをわすれたんですが、ありませんか。"],["さくら","黒いかさですね。どんなかさですか。"],["ケン","＿＿＿＿＿。"],["さくら","ああ、それなら今朝、店の人が見つけてあそこにおいてありますよ。"]],
+        correct: "持つところに白いテープがついています。",
+        distractors: ["きのう、駅前のデパートで買いました。","雨が降っていたので使いました。","友だちから借りたたいせつなかさなんです。"],
+        explanation: "Sakura menanyakan seperti apa payung hitam tersebut, sehingga jawaban yang tepat adalah menjelaskan ciri pita putih pada bagian pegangannya."
+      },
+      {
+        id: 87,
+        turns: [["やまだ","もしもし、やまだですが、さとうさんはいますか。"],["ミカ","すみません。さとうは今、ほかの電話に出ています。＿＿＿＿＿。"],["やまだ","いえ、10分後にまたこちらから電話します。"]],
+        correct: "終わったら、そちらに電話しましょうか。",
+        distractors: ["また明日電話してもらえますか。","いつ帰るか分かりません。","電話ばんごうを教えてもらえますか。"],
+        explanation: "Yamada menjawab akan menelepon lagi 10 menit kemudian, yang merupakan respons terhadap tawaran apakah perlu ditelepon balik setelah selesai."
+      },
+      {
+        id: 88,
+        turns: [["ジョン","たなかさん、明日のテニスのしあい、がんばってくださいね。"],["たなか","ありがとうございます。＿＿＿＿＿。"]],
+        correct: "かてるようにがんばります。",
+        distractors: ["きのうのしあいはまけてざんねんでした。","ジョンさんもしあいに出られてよかったですね。","テニスのやり方を教えてもらえませんか。"],
+        explanation: "Saat diberi semangat sebelum pertandingan, respons yang tepat adalah menyatakan tekad untuk berusaha sebaik mungkin agar menang."
+      },
+      {
+        id: 89,
+        turns: [["ソラ","すみません、この赤いシャツのLサイズはありますか。"],["はな","しょうしょうお待ちください。……すみません、赤はMサイズしかないんです。"],["ソラ","そうですか。＿＿＿＿＿。"]],
+        correct: "じゃあ、ほかの色を見せてもらえますか。",
+        distractors: ["では、赤いLサイズをください。","着る部屋はどこにありますか。","Mサイズは大きすぎますね。"],
+        explanation: "Karena warna merah ukuran L habis dan hanya ada M, respons yang paling masuk akal adalah meminta melihat warna lain."
+      },
+      {
+        id: 90,
+        turns: [["ジョン","さくらさん、今度の日曜日、うちの近くでおまつりがあるんですが、見に来ませんか。"],["さくら","わあ、いいですね。何時ごろから始まるんですか。"],["ジョン","お昼からいろいろなお店が出て、夜7時からは花火も見えるそうです。"],["さくら","花火もあるんですね！ぜひ行きたいです。＿＿＿＿＿。"],["ジョン","じゃあ、夕方の5時に駅の入口で会いましょうか。"],["さくら","わかりました。楽しみにしていますね。"]],
+        correct: "何時にどこで会いましょうか。",
+        distractors: ["日曜日は仕事で行けそうにありません。","お店でなにを売るつもりなんですか。","花火はテレビで見ることにしますね。"],
+        explanation: "John mengusulkan bertemu jam 5 sore di pintu masuk stasiun, yang merupakan jawaban langsung atas pertanyaan Sakura tentang jam dan tempat bertemu."
+      },
+      {
+        id: 91,
+        turns: [["はるか","あおいさん、さっきそこにおいたケーキ、知りませんか。"],["あおい","えっ、あのケーキ、はるかさんのだったんですか。"],["はるか","はい、あとで食べようと思ってはこに名前を書いておいたんですが。"],["あおい","ごめんなさい！名前を見ないで、＿＿＿＿＿。"],["はるか","そうだったんですか。じゃあ、今度同じものを買ってくださいね。"]],
+        correct: "みんなのおみやげだと思って食べてしまいました。",
+        distractors: ["テーブルの下においておきましたよ。","古くなっていたので、すててしまいました。","まだあそこにそのまま入っていますよ。"],
+        explanation: "Aoi meminta maaf karena tidak melihat nama di kotak kue tersebut, dan Haruka memintanya membelikan kue yang sama lain kali, yang berarti Aoi tidak sengaja memakannya karena mengira oleh-oleh untuk bersama."
+      },
+      {
+        id: 92,
+        turns: [["はるか","先生、ちょっとお聞きしたいことがあるんですが、今いいですか。"],["たなか","＿＿＿＿＿。3時からのかいぎの前に話しましょう。"]],
+        correct: "ええ、いいですよ。",
+        distractors: ["すみません、今いそがしいです。","こちらこそ、よろしく。","いいえ、どういたしまして。"],
+        explanation: "Kalimat kedua mengajak berbicara sebelum rapat jam 3, sehingga respons yang tepat adalah menyetujui permintaan waktu (「ええ、いいですよ」)."
+      },
+      {
+        id: 93,
+        turns: [["やまだ","ソラさん、さっきかいぎで使ったパソコン、どこにおきましたか。"],["ソラ","まだかいぎ室のテーブルの上においてあります。午後も使うと聞いたので。"],["やまだ","あ、午後のかいぎはなくなったんですよ。"],["ソラ","そうだったんですか。＿＿＿＿＿。"]],
+        correct: "じゃあ、今すぐかたづけてきますね。",
+        distractors: ["そのパソコンはもう動きませんよ。","午後のかいぎもがんばってくださいね。","では、そのまま出しておきましょう。"],
+        explanation: "Karena rapat siang ditiadakan dan laptop tidak jadi dipakai lagi, Sora berinisiatif untuk segera membereskannya."
+      },
+      {
+        id: 94,
+        turns: [["はるか","すみません、この建物の中で写真をとってもいいですか。"],["さとう","すみません。1階の部屋では写真をとらないでください。"],["はるか","そうですか。2階はどうですか。"],["さとう","2階はとってもいいですが、＿＿＿＿＿。"]],
+        correct: "強い電気は出さないようにおねがいします。",
+        distractors: ["カメラをかばんから出さないでください。","2階も写真はぜんぜんとらないでください。","建物の外でもとってはいけません。"],
+        explanation: "Untuk lantai 2 petugas mengizinkan memotret (「2階はとってもいいですが」), namun meminta agar tidak menyalakan cahaya terang/lampu kilat."
+      },
+      {
+        id: 95,
+        turns: [["ソラ","すずきさん、今度の金曜日の食事会、場所はどこでしたか。"],["すずき","駅の北口にある『さくら』というレストランですよ。"],["ソラ","ああ、あそこですね。＿＿＿＿＿。"]],
+        correct: "始まる時間は7時でいいですか。",
+        distractors: ["金曜日には行けませんよ。","どんな料理を作りますか。","北口はどこにありますか。"],
+        explanation: "Setelah memastikan tempat acara, Sora melanjutkan dengan memastikan jam mulai acara."
+      },
+      {
+        id: 96,
+        turns: [["マイク","たろうさん、日本人はどうして家に入る前に靴をぬぐんですか。"],["たろう","うーん、むかしから家の中をきれいにするしゅうかんがあるからだと思いますよ。"],["マイク","なるほど。＿＿＿＿＿。"]],
+        correct: "だから部屋の中でそのまま下にすわれるんですね。",
+        distractors: ["外を靴なしで歩くのと同じですね。","それで家の中でも靴をはくんですね。","日本の家はそうじをしなくてもいいんですね。"],
+        explanation: "Mike memahami penjelasan Taro (「なるほど」) lalu menyimpulkan bahwa karena bagian dalam rumah bersih, orang bisa duduk langsung di lantai."
+      },
+      {
+        id: 97,
+        turns: [["たなか","さくらさん、明日の朝、おきゃくさんの会社へ行く時間ですが、9時に駅で会うよていでしたね。"],["さくら","はい、そうでしたが、電車に人が多いかもしれないので、少し早くしませんか。"],["たなか","そうですね。＿＿＿＿＿。"],["さくら","はい、8時45分ならゆっくり行けると思います。"],["たなか","わかりました。では、切符売り場の前で会いましょう。"]],
+        correct: "じゃあ、15分早くして8時45分にしましょうか。",
+        distractors: ["明日のよていは来週にしましょうか。","やっぱり電車ではなく歩いて行きましょう。","では、9時半にかえてもいいですか。"],
+        explanation: "Sakura merespons 'Ya, kalau jam 8.45 rasanya bisa berangkat dengan leluasa', sehingga kalimat Tanaka pada giliran ketiga adalah mengusulkan jam 8.45 (15 menit lebih awal)."
+      },
+      {
+        id: 98,
+        turns: [["さくら","あ、やまださん、その荷物は重そうですね。＿＿＿＿＿。"],["やまだ","ありがとうございます。じゃあ、この小さいかばんをおねがいします。"]],
+        correct: "半分持ちましょうか。",
+        distractors: ["てつだってくれませんか。","重くてもいいですよ。","持ってあげましたよ。"],
+        explanation: "Ungkapan 「～ましょうか」 digunakan untuk menawarkan bantuan secara sopan kepada lawan bicara yang tampak kesulitan membawa barang berat."
+      },
+      {
+        id: 99,
+        turns: [["ユミ","あ、ジョンさん、パソコンの電気がついたままですよ。"],["ジョン","すみません、今まだ仕事で使っているところなんです。"],["ユミ","そうだったんですか。＿＿＿＿＿。"],["ジョン","はい、あと5分ぐらいで終わりますから、終わったらけしますね。"]],
+        correct: "まだ時間がかかりそうですか。",
+        distractors: ["パソコンがわるくなったんですか。","わたしが電気をけしましょうか。","もう帰ってしまったと思いました。"],
+        explanation: "John menjawab 'Ya, sekitar 5 menit lagi selesai', sehingga pertanyaan Yumi pada giliran ketiga adalah menanyakan apakah masih membutuhkan waktu."
+      },
+      {
+        id: 100,
+        turns: [["ユミ","たくやくん、学校の宿題、もう出した？"],["たくや","うん、さっき先生のつくえに出したところだよ。ユミさんは？"],["ユミ","わたしはこれから出すんだけど、＿＿＿＿＿。"],["たくや","今日の午後5時までだから、まだ2時間あるよ。"],["ユミ","あ、ほんとうだ。4時までかと思っていたから、よかった！"]],
+        correct: "何時までに出せばいいんだっけ。",
+        distractors: ["宿題はどこについて書けばいいかな。","きのうのうちに出しておいたよ。","どうやって先生に出すの？"],
+        explanation: "Takuya menjawab bahwa batas waktunya sampai jam 5 sore hari ini dan masih ada 2 jam lagi, sehingga pertanyaan Yumi sebelumnya adalah memastikan sampai jam berapa harus dikumpulkan."
+      }
+    ];
+
+    // Speaker Avatar Color Palette
+    const SPEAKER_COLORS = {
+      "ゆい": "bg-pink-100 text-pink-800 border-pink-200",
+      "はな": "bg-rose-100 text-rose-800 border-rose-200",
+      "ミカ": "bg-purple-100 text-purple-800 border-purple-200",
+      "けんた": "bg-blue-100 text-blue-800 border-blue-200",
+      "マリア": "bg-fuchsia-100 text-fuchsia-800 border-fuchsia-200",
+      "さとう": "bg-emerald-100 text-emerald-800 border-emerald-200",
+      "たろう": "bg-sky-100 text-sky-800 border-sky-200",
+      "ナオミ": "bg-amber-100 text-amber-800 border-amber-200",
+      "マイク": "bg-indigo-100 text-indigo-800 border-indigo-200",
+      "リナ": "bg-violet-100 text-violet-800 border-violet-200",
+      "たくや": "bg-cyan-100 text-cyan-800 border-cyan-200",
+      "さくら": "bg-pink-100 text-pink-800 border-pink-200",
+      "あおい": "bg-teal-100 text-teal-800 border-teal-200",
+      "ソラ": "bg-orange-100 text-orange-800 border-orange-200",
+      "ユミ": "bg-lime-100 text-lime-800 border-lime-200",
+      "すずき": "bg-slate-200 text-slate-800 border-slate-300",
+      "ジョン": "bg-blue-100 text-blue-800 border-blue-200",
+      "やまだ": "bg-emerald-100 text-emerald-800 border-emerald-200",
+      "たなか": "bg-amber-100 text-amber-900 border-amber-200",
+      "はるか": "bg-rose-100 text-rose-800 border-rose-200",
+      "ケン": "bg-indigo-100 text-indigo-800 border-indigo-200"
+    };
+
+    const STORAGE_KEY = "kaiwa_n4_jft_a2_quiz_state_v1";
+
+    // Application State
+    let state = {
+      mode: "all",
+      currentIndex: 0,
+      sessionQuestions: [], // Array of { id, shuffledOptions: [{label, text, isCorrect}], selectedLabel: null | 'A'|'B'|'C'|'D', isCorrect: null | boolean }
+      wrongBankIds: [],     // Persistent array of question IDs answered wrong
+      soundEnabled: true,
+      customCount: null,
+      showAllBankAnswers: false
+    };
+
+    // Web Audio Synthesizer for subtle feedback sounds
+    let audioCtx = null;
+    function playFeedbackSound(isCorrect) {
+      if (!state.soundEnabled) return;
+      try {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        const now = audioCtx.currentTime;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        if (isCorrect) {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(523.25, now); // C5
+          osc.frequency.setValueAtTime(659.25, now + 0.08); // E5
+          gain.gain.setValueAtTime(0.12, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+          osc.start(now);
+          osc.stop(now + 0.25);
+        } else {
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(300, now);
+          osc.frequency.setValueAtTime(220, now + 0.1);
+          gain.gain.setValueAtTime(0.14, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.28);
+          osc.start(now);
+          osc.stop(now + 0.28);
+        }
+      } catch (e) {
+        // Ignore audio errors
+      }
+    }
+
+    // Fisher-Yates Shuffle Algorithm
+    function fisherYatesShuffle(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    // Build a randomized question item with shuffled A, B, C, D options
+    function buildShuffledQuestionItem(qObj) {
+      const rawOptions = [
+        { text: qObj.correct, isCorrect: true },
+        ...qObj.distractors.map(d => ({ text: d, isCorrect: false }))
+      ];
+      const shuffled = fisherYatesShuffle(rawOptions);
+      const labels = ['A', 'B', 'C', 'D'];
+      const shuffledOptions = shuffled.map((opt, idx) => ({
+        label: labels[idx],
+        text: opt.text,
+        isCorrect: opt.isCorrect
+      }));
+
+      return {
+        id: qObj.id,
+        shuffledOptions,
+        selectedLabel: null,
+        isCorrect: null
+      };
+    }
+
+    // Initialize or build session based on mode
+    function buildSession(mode) {
+      let pool = [...RAW_QUESTIONS];
+
+      if (mode === "turns-2") {
+        pool = pool.filter(q => q.turns.length === 2);
+      } else if (mode === "turns-3") {
+        pool = pool.filter(q => q.turns.length === 3);
+      } else if (mode === "turns-4") {
+        pool = pool.filter(q => q.turns.length === 4);
+      } else if (mode === "turns-5") {
+        pool = pool.filter(q => q.turns.length === 5);
+      } else if (mode === "turns-6") {
+        pool = pool.filter(q => q.turns.length === 6);
+      } else if (mode === "wrong") {
+        pool = pool.filter(q => state.wrongBankIds.includes(q.id));
+        if (pool.length === 0) {
+          pool = [...RAW_QUESTIONS];
+          mode = "all";
+          document.getElementById("modeSelect").value = "all";
+        }
+      }
+
+      // Shuffle question order using Fisher-Yates
+      let shuffledPool = fisherYatesShuffle(pool);
+
+      if (state.customCount) {
+        shuffledPool = shuffledPool.slice(0, state.customCount);
+      } else if (mode === "10") {
+        shuffledPool = shuffledPool.slice(0, 10);
+      } else if (mode === "25") {
+        shuffledPool = shuffledPool.slice(0, 25);
+      } else if (mode === "50") {
+        shuffledPool = shuffledPool.slice(0, 50);
+      }
+
+      state.mode = mode;
+      state.currentIndex = 0;
+      state.sessionQuestions = shuffledPool.map(q => buildShuffledQuestionItem(q));
+
+      saveState();
+      hideSummaryCard();
+      renderQuiz();
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+          mode: state.mode,
+          currentIndex: state.currentIndex,
+          sessionQuestions: state.sessionQuestions,
+          wrongBankIds: state.wrongBankIds,
+          soundEnabled: state.soundEnabled,
+          customCount: state.customCount
+        }));
+      } catch (e) {
+        // Ignore storage quota errors
+      }
+    }
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return false;
+        const parsed = JSON.parse(raw);
+        if (parsed && Array.isArray(parsed.sessionQuestions) && parsed.sessionQuestions.length > 0) {
+          state.mode = parsed.mode || "all";
+          state.currentIndex = typeof parsed.currentIndex === "number" ? parsed.currentIndex : 0;
+          if (state.currentIndex >= parsed.sessionQuestions.length) {
+            state.currentIndex = 0;
+          }
+          state.sessionQuestions = parsed.sessionQuestions;
+          state.wrongBankIds = Array.isArray(parsed.wrongBankIds) ? parsed.wrongBankIds : [];
+          state.soundEnabled = typeof parsed.soundEnabled === "boolean" ? parsed.soundEnabled : true;
+          state.customCount = (Number.isInteger(parsed.customCount) && parsed.customCount >= 1 && parsed.customCount <= 50) ? parsed.customCount : null;
+          return true;
+        }
+      } catch (e) {
+        return false;
+      }
+      return false;
+    }
+
+    // Jumlah soal per sesi (1-50)
+    function clampCount(v) {
+      const n = parseInt(v, 10);
+      return isNaN(n) ? null : Math.min(50, Math.max(1, n));
+    }
+    function syncCountFrom(src) {
+      const num = document.getElementById("countNumber");
+      const range = document.getElementById("countRange");
+      if (src === "range") {
+        num.value = range.value;
+      } else {
+        const v = clampCount(num.value);
+        if (v !== null) range.value = v;
+      }
+    }
+    function syncCountUI() {
+      const num = document.getElementById("countNumber");
+      const range = document.getElementById("countRange");
+      num.value = state.customCount || "";
+      range.value = state.customCount || 50;
+      document.getElementById("btnClearCount").classList.toggle("hidden", !state.customCount);
+    }
+    function applyCustomCount() {
+      state.customCount = clampCount(document.getElementById("countNumber").value);
+      syncCountUI();
+      buildSession(document.getElementById("modeSelect").value);
+    }
+    function clearCustomCount() {
+      state.customCount = null;
+      syncCountUI();
+      buildSession(document.getElementById("modeSelect").value);
+    }
+
+    // Update top statistics & wrong bank indicators
+    function updateStatsUI() {
+      const answered = state.sessionQuestions.filter(q => q.selectedLabel !== null);
+      const correctCount = answered.filter(q => q.isCorrect === true).length;
+      const wrongCount = answered.filter(q => q.isCorrect === false).length;
+      const accuracy = answered.length > 0 ? Math.round((correctCount / answered.length) * 100) : 0;
+
+      document.getElementById("statCorrect").textContent = correctCount;
+      document.getElementById("statWrong").textContent = wrongCount;
+      document.getElementById("statAccuracy").textContent = `${accuracy}%`;
+
+      // Update wrong bank option & quick button
+      const wrongTotal = state.wrongBankIds.length;
+      const wrongOption = document.getElementById("wrongModeOption");
+      wrongOption.textContent = `Ulangi Soal Salah (${wrongTotal} Soal)`;
+      wrongOption.disabled = wrongTotal === 0 && state.mode !== "wrong";
+
+      const btnRetryWrongQuick = document.getElementById("btnRetryWrongQuick");
+      document.getElementById("wrongCountBadge").textContent = wrongTotal;
+      if (wrongTotal > 0 && state.mode !== "wrong") {
+        btnRetryWrongQuick.classList.remove("hidden");
+        btnRetryWrongQuick.classList.add("inline-flex");
+      } else {
+        btnRetryWrongQuick.classList.add("hidden");
+        btnRetryWrongQuick.classList.remove("inline-flex");
+      }
+
+      // Progress bar
+      const total = state.sessionQuestions.length;
+      const currentNum = state.currentIndex + 1;
+      document.getElementById("countHint").textContent = `Sesi ini berisi ${total} soal`;
+      document.getElementById("progressLabel").textContent = `Soal ${currentNum} dari ${total}`;
+      document.getElementById("answeredCountLabel").textContent = `${answered.length} dari ${total} terjawab`;
+      const pct = Math.max(2, Math.round((currentNum / total) * 100));
+      document.getElementById("progressBarFill").style.width = `${pct}%`;
+    }
+
+    // Render active question card
+    function renderQuiz() {
+      updateStatsUI();
+
+      const sessionItem = state.sessionQuestions[state.currentIndex];
+      if (!sessionItem) return;
+
+      const rawQ = RAW_QUESTIONS.find(q => q.id === sessionItem.id);
+      if (!rawQ) return;
+
+      const isAnswered = sessionItem.selectedLabel !== null;
+
+      // Header badges
+      document.getElementById("qIndexBadge").textContent = `Soal #${state.currentIndex + 1}`;
+      document.getElementById("qOrigIdBadge").textContent = `No. Asli: ${rawQ.id}`;
+      document.getElementById("qTurnBadge").innerHTML = `<i class="fa-regular fa-comment-dots"></i> ${rawQ.turns.length} Giliran Bicara`;
+
+      const statusBadge = document.getElementById("qStatusBadge");
+      if (!isAnswered) {
+        statusBadge.className = "inline-flex items-center gap-1 px-2.5 py-1 rounded-xl text-xs font-semibold bg-slate-100 text-slate-600";
+        statusBadge.innerHTML = `<i class="fa-regular fa-circle"></i> Belum Dijawab`;
+      } else if (sessionItem.isCorrect) {
+        statusBadge.className = "inline-flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300";
+        statusBadge.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-600"></i> Dijawab Benar`;
+      } else {
+        statusBadge.className = "inline-flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-bold bg-rose-100 text-rose-800 border border-rose-300";
+        statusBadge.innerHTML = `<i class="fa-solid fa-circle-xmark text-rose-600"></i> Dijawab Salah`;
+      }
+
+      // Render Dialog Chat Bubbles
+      const dialogContainer = document.getElementById("dialogContainer");
+      dialogContainer.innerHTML = "";
+
+      // Determine speaker order so Speaker 1 aligns left, Speaker 2 aligns right (or distinct styling)
+      const uniqueSpeakers = [];
+      rawQ.turns.forEach(([sp]) => {
+        if (!uniqueSpeakers.includes(sp)) uniqueSpeakers.push(sp);
+      });
+
+      rawQ.turns.forEach(([speaker, line], idx) => {
+        const speakerIdx = uniqueSpeakers.indexOf(speaker);
+        const isSecondSpeaker = speakerIdx === 1;
+        const avatarColor = isSecondSpeaker ? "bg-white text-indigo-900 border-indigo-900" : "bg-indigo-900 text-white border-indigo-900";
+
+        // Format blank slot ＿＿＿＿＿
+        let formattedLine = escapeHtml(line);
+        if (formattedLine.includes("＿＿＿＿＿")) {
+          if (!isAnswered) {
+            const blankHtml = `<span class="inline-flex items-center px-3 py-0.5 mx-1 rounded-lg border-2 border-dashed border-amber-500 text-amber-800 font-bold bg-amber-50/90 blank-slot-pending text-sm sm:text-base">＿＿＿＿＿</span>`;
+            formattedLine = formattedLine.replace("＿＿＿＿＿", blankHtml);
+          } else {
+            const cleanCorrect = escapeHtml(rawQ.correct);
+            const filledHtml = `<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 mx-1 rounded-lg bg-emerald-100 border-2 border-emerald-500 text-emerald-900 font-bold shadow-xs">${cleanCorrect} <i class="fa-solid fa-check text-emerald-600 text-xs"></i></span>`;
+            formattedLine = formattedLine.replace("＿＿＿＿＿", filledHtml);
+          }
+        }
+
+        const rowDiv = document.createElement("div");
+        rowDiv.className = `flex items-start gap-3 ${isSecondSpeaker ? "sm:pl-8" : "sm:pr-8"}`;
+
+        rowDiv.innerHTML = `
+          <div class="shrink-0 flex flex-col items-center">
+            <div class="px-2.5 py-1.5 rounded-sm border text-xs font-bold jp-text ${avatarColor}">
+              ${escapeHtml(speaker)}
+            </div>
+            <span class="text-[10px] text-slate-400 font-medium mt-0.5">#${idx + 1}</span>
+          </div>
+          <div class="flex-1 bg-white border ${line.includes("＿＿＿＿＿") ? "border-indigo-900 ring-4 ring-amber-200" : "border-slate-200"} rounded-md px-4 py-3">
+            <p class="jp-text text-slate-800 text-base sm:text-lg font-medium">${formattedLine}</p>
+          </div>
+        `;
+        dialogContainer.appendChild(rowDiv);
+      });
+
+      // Render 4 Shuffled Options
+      const optionsContainer = document.getElementById("optionsContainer");
+      optionsContainer.innerHTML = "";
+
+      sessionItem.shuffledOptions.forEach((opt, idx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        const isSelected = sessionItem.selectedLabel === opt.label;
+
+        let cardStyle = "border-slate-200 bg-white hover:border-indigo-900 hover:bg-amber-50 text-slate-800";
+        let badgeStyle = "bg-slate-100 text-slate-700 border-slate-300 group-hover:bg-indigo-900 group-hover:text-white group-hover:border-indigo-900";
+        let rightTagHtml = `<span class="text-[11px] text-slate-400 hidden sm:inline">[${idx + 1}]</span>`;
+
+        if (isAnswered) {
+          if (opt.isCorrect) {
+            cardStyle = "border-emerald-500 bg-emerald-50/90 text-emerald-950 ring-2 ring-emerald-200";
+            badgeStyle = "bg-emerald-600 text-white border-emerald-600";
+            rightTagHtml = `
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-600 text-white shrink-0">
+                <i class="fa-solid fa-check"></i> ${isSelected ? "Jawaban Anda Benar!" : "Jawaban yang Tepat"}
+              </span>
+            `;
+          } else if (isSelected && !opt.isCorrect) {
+            cardStyle = "border-rose-500 bg-rose-50/90 text-rose-950 ring-2 ring-rose-200";
+            badgeStyle = "bg-rose-600 text-white border-rose-600";
+            rightTagHtml = `
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold bg-rose-600 text-white shrink-0">
+                <i class="fa-solid fa-xmark"></i> Pilihan Anda (Kurang Tepat)
+              </span>
+            `;
+          } else {
+            cardStyle = "border-slate-200 bg-slate-50/60 text-slate-400 opacity-75";
+            badgeStyle = "bg-slate-200 text-slate-500 border-slate-300";
+            rightTagHtml = "";
+          }
+        }
+
+        btn.className = `group w-full text-left p-3.5 sm:p-4 rounded-2xl border-2 transition-all flex items-center justify-between gap-3 ${cardStyle} ${!isAnswered ? "cursor-pointer active:scale-[0.99]" : "cursor-default"}`;
+        if (!isAnswered) {
+          btn.onclick = () => selectAnswer(opt.label);
+        }
+
+        btn.innerHTML = `
+          <div class="flex items-center gap-3.5 min-w-0">
+            <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 font-bold text-sm flex items-center justify-center shrink-0 transition-colors ${badgeStyle}">
+              ${opt.label}
+            </span>
+            <span class="jp-text text-sm sm:text-base font-medium break-words">${escapeHtml(opt.text)}</span>
+          </div>
+          ${rightTagHtml}
+        `;
+
+        optionsContainer.appendChild(btn);
+      });
+
+      // Render Feedback & Explanation Box if answered
+      const feedbackBox = document.getElementById("feedbackBox");
+      if (!isAnswered) {
+        feedbackBox.classList.add("hidden");
+        feedbackBox.innerHTML = "";
+      } else {
+        const chosenOpt = sessionItem.shuffledOptions.find(o => o.label === sessionItem.selectedLabel);
+        const correctOpt = sessionItem.shuffledOptions.find(o => o.isCorrect);
+
+        feedbackBox.classList.remove("hidden");
+        if (sessionItem.isCorrect) {
+          feedbackBox.className = "mt-6 rounded-2xl p-5 border-2 border-emerald-400 bg-emerald-50/70 text-slate-800 animate-fade-in";
+          feedbackBox.innerHTML = `
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 text-lg shadow-xs">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div class="space-y-2 flex-1">
+                <div class="flex flex-wrap items-center gap-2">
+                  <h4 class="font-extrabold text-emerald-900 text-sm sm:text-base">Jawaban Benar! (${correctOpt.label})</h4>
+                  <span class="text-xs px-2 py-0.5 rounded-md bg-emerald-200/70 text-emerald-900 font-semibold">Bagian kosong pada dialog telah dilengkapi</span>
+                </div>
+                <div class="p-3 rounded-xl bg-white border border-emerald-200">
+                  <div class="text-[11px] font-bold text-emerald-700">Ungkapan yang Tepat:</div>
+                  <div class="jp-text font-bold text-emerald-950 text-sm sm:text-base mt-0.5">${correctOpt.label}. ${escapeHtml(correctOpt.text)}</div>
+                </div>
+                <div class="pt-1">
+                  <div class="text-xs font-bold text-slate-500 mb-1 flex items-center gap-1.5">
+                    <i class="fa-solid fa-lightbulb text-amber-500"></i> Pembahasan Konteks:
+                  </div>
+                  <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${escapeHtml(rawQ.explanation)}</p>
+                </div>
+              </div>
+            </div>
+          `;
+        } else {
+          feedbackBox.className = "mt-6 rounded-2xl p-5 border-2 border-rose-400 bg-rose-50/70 text-slate-800 animate-fade-in";
+          feedbackBox.innerHTML = `
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-rose-600 text-white flex items-center justify-center shrink-0 text-lg shadow-xs">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <div class="space-y-3 flex-1">
+                <div>
+                  <h4 class="font-extrabold text-rose-900 text-sm sm:text-base">Jawaban Anda Kurang Tepat</h4>
+                  <p class="text-xs text-rose-700 mt-0.5">Soal ini otomatis disimpan ke daftar <strong>"Ulangi Soal Salah"</strong> agar Anda bisa melatihnya kembali.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <div class="p-3 rounded-xl bg-white border border-rose-200">
+                    <div class="text-[11px] font-bold text-rose-600 flex items-center gap-1">
+                      <i class="fa-solid fa-circle-xmark"></i> Pilihan Anda (${chosenOpt ? chosenOpt.label : "-"}):
+                    </div>
+                    <div class="jp-text font-medium text-rose-900 text-sm mt-0.5 line-through">${chosenOpt ? escapeHtml(chosenOpt.text) : ""}</div>
+                  </div>
+                  <div class="p-3 rounded-xl bg-white border-2 border-emerald-400">
+                    <div class="text-[11px] font-bold text-emerald-700 flex items-center gap-1">
+                      <i class="fa-solid fa-circle-check"></i> Jawaban yang Benar (${correctOpt.label}):
+                    </div>
+                    <div class="jp-text font-bold text-emerald-950 text-sm mt-0.5">${escapeHtml(correctOpt.text)}</div>
+                  </div>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white/90 border border-slate-200">
+                  <div class="text-xs font-bold text-indigo-700 mb-1 flex items-center gap-1.5">
+                    <i class="fa-solid fa-book-open-reader"></i> Mengapa Jawaban ${correctOpt.label} Paling Tepat?
+                  </div>
+                  <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${escapeHtml(rawQ.explanation)}</p>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      // Update Prev & Next buttons
+      document.getElementById("btnPrevQ").disabled = state.currentIndex === 0;
+      const btnNextText = document.getElementById("btnNextText");
+      if (state.currentIndex === state.sessionQuestions.length - 1) {
+        btnNextText.textContent = "Lihat Ringkasan Hasil";
+      } else {
+        btnNextText.textContent = "Soal Berikutnya";
+      }
+    }
+
+    // Handle selecting an option (A/B/C/D)
+    function selectAnswer(label) {
+      const sessionItem = state.sessionQuestions[state.currentIndex];
+      if (!sessionItem || sessionItem.selectedLabel !== null) return;
+
+      const chosen = sessionItem.shuffledOptions.find(o => o.label === label);
+      if (!chosen) return;
+
+      sessionItem.selectedLabel = label;
+      sessionItem.isCorrect = chosen.isCorrect;
+
+      // Update wrongBankIds
+      if (!chosen.isCorrect) {
+        if (!state.wrongBankIds.includes(sessionItem.id)) {
+          state.wrongBankIds.push(sessionItem.id);
+        }
+      } else {
+        // If answered right in "wrong" mode, remove from wrongBankIds
+        if (state.mode === "wrong") {
+          state.wrongBankIds = state.wrongBankIds.filter(id => id !== sessionItem.id);
+        }
+      }
+
+      playFeedbackSound(chosen.isCorrect);
+      saveState();
+      renderQuiz();
+    }
+
+    // Navigation functions
+    function prevQuestion() {
+      if (state.currentIndex > 0) {
+        state.currentIndex--;
+        saveState();
+        hideSummaryCard();
+        renderQuiz();
+      }
+    }
+
+    function nextQuestion() {
+      if (state.currentIndex < state.sessionQuestions.length - 1) {
+        state.currentIndex++;
+        saveState();
+        renderQuiz();
+      } else {
+        showSummaryCard();
+      }
+    }
+
+    function showSummaryCard() {
+      document.getElementById("questionCardContainer").classList.add("hidden");
+      const summaryCard = document.getElementById("sessionCompleteCard");
+      summaryCard.classList.remove("hidden");
+
+      const total = state.sessionQuestions.length;
+      const answered = state.sessionQuestions.filter(q => q.selectedLabel !== null);
+      const correctCount = answered.filter(q => q.isCorrect === true).length;
+      const wrongCount = answered.filter(q => q.isCorrect === false).length;
+      const pct = total > 0 ? Math.round((correctCount / total) * 100) : 0;
+
+      document.getElementById("sumTotal").textContent = total;
+      document.getElementById("sumCorrect").textContent = correctCount;
+      document.getElementById("sumWrong").textContent = wrongCount;
+      document.getElementById("sumScore").textContent = `${pct}%`;
+      document.getElementById("sumScoreDetail").textContent = `${correctCount} dari ${total} soal`;
+
+      const retryBtn = document.getElementById("btnSummaryRetryWrong");
+      if (state.wrongBankIds.length > 0) {
+        retryBtn.classList.remove("hidden");
+        retryBtn.innerHTML = `<i class="fa-solid fa-rotate-left"></i> <span>Ulangi Soal yang Salah (${state.wrongBankIds.length} Soal)</span>`;
+      } else {
+        retryBtn.classList.add("hidden");
+      }
+    }
+
+    function hideSummaryCard() {
+      document.getElementById("sessionCompleteCard").classList.add("hidden");
+      document.getElementById("questionCardContainer").classList.remove("hidden");
+    }
+
+    function returnToQuizFromSummary() {
+      hideSummaryCard();
+      renderQuiz();
+    }
+
+    // Mode change & reshuffle handlers
+    function handleModeChange() {
+      const selectedMode = document.getElementById("modeSelect").value;
+      buildSession(selectedMode);
+    }
+
+    function reshuffleCurrentMode() {
+      const currentMode = document.getElementById("modeSelect").value;
+      buildSession(currentMode);
+    }
+
+    function startWrongOnlyMode() {
+      if (state.wrongBankIds.length === 0) return;
+      document.getElementById("modeSelect").value = "wrong";
+      switchTab("quiz");
+      buildSession("wrong");
+    }
+
+    // Question Grid Modal
+    function openQuestionGridModal() {
+      const modal = document.getElementById("questionGridModal");
+      const container = document.getElementById("questionGridCells");
+      container.innerHTML = "";
+
+      state.sessionQuestions.forEach((item, idx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        let colorClass = "bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200";
+
+        if (idx === state.currentIndex) {
+          colorClass = "bg-indigo-600 text-white border-indigo-600 ring-2 ring-indigo-300 font-extrabold";
+        } else if (item.selectedLabel !== null) {
+          colorClass = item.isCorrect
+            ? "bg-emerald-500 hover:bg-emerald-600 text-white border-emerald-600"
+            : "bg-rose-500 hover:bg-rose-600 text-white border-rose-600";
+        }
+
+        btn.className = `h-10 rounded-full border text-xs font-bold flex items-center justify-center transition-all ${colorClass}`;
+        btn.textContent = idx + 1;
+        btn.onclick = () => {
+          state.currentIndex = idx;
+          saveState();
+          closeQuestionGridModal();
+          hideSummaryCard();
+          renderQuiz();
+        };
+        container.appendChild(btn);
+      });
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeQuestionGridModal() {
+      const modal = document.getElementById("questionGridModal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    // Reset Modal
+    function openResetModal() {
+      const modal = document.getElementById("resetModal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeResetModal() {
+      const modal = document.getElementById("resetModal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function confirmFullReset() {
+      state.wrongBankIds = [];
+      document.getElementById("modeSelect").value = "all";
+      closeResetModal();
+      buildSession("all");
+    }
+
+    // Sound toggle
+    function toggleSound() {
+      state.soundEnabled = !state.soundEnabled;
+      updateSoundIcon();
+      saveState();
+    }
+
+    function updateSoundIcon() {
+      const icon = document.getElementById("soundIcon");
+      if (state.soundEnabled) {
+        icon.className = "fa-solid fa-volume-high text-sm text-amber-200";
+      } else {
+        icon.className = "fa-solid fa-volume-xmark text-sm text-indigo-300";
+      }
+    }
+
+    // Switch between Quiz View and Bank 100 Soal View
+    function switchTab(tab) {
+      const viewQuiz = document.getElementById("viewQuiz");
+      const viewBank = document.getElementById("viewBank");
+      const tabBtnQuiz = document.getElementById("tabBtnQuiz");
+      const tabBtnBank = document.getElementById("tabBtnBank");
+
+      if (tab === "quiz") {
+        viewQuiz.classList.remove("hidden");
+        viewBank.classList.add("hidden");
+        tabBtnQuiz.className = "tab tab-on";
+        tabBtnBank.className = "tab";
+        renderQuiz();
+      } else {
+        viewQuiz.classList.add("hidden");
+        viewBank.classList.remove("hidden");
+        tabBtnBank.className = "tab tab-on";
+        tabBtnQuiz.className = "tab";
+        renderBankList();
+      }
+    }
+
+    // Bank 100 Soal View Rendering
+    function toggleShowAllBankAnswers() {
+      state.showAllBankAnswers = !state.showAllBankAnswers;
+      const textSpan = document.getElementById("toggleAllAnswersText");
+      textSpan.textContent = state.showAllBankAnswers ? "Sembunyikan Semua Kunci" : "Tampilkan Semua Kunci";
+      renderBankList();
+    }
+
+    function renderBankList() {
+      const query = (document.getElementById("bankSearchInput").value || "").trim().toLowerCase();
+      const filterVal = document.getElementById("bankFilterSelect").value;
+      const container = document.getElementById("bankListContainer");
+      container.innerHTML = "";
+
+      const filtered = RAW_QUESTIONS.filter(q => {
+        if (filterVal === "wrong") {
+          if (!state.wrongBankIds.includes(q.id)) return false;
+        } else if (filterVal !== "all") {
+          if (q.turns.length !== parseInt(filterVal, 10)) return false;
+        }
+
+        if (!query) return true;
+        const inTurns = q.turns.some(([sp, tx]) => sp.toLowerCase().includes(query) || tx.toLowerCase().includes(query));
+        const inCorrect = q.correct.toLowerCase().includes(query);
+        const inDistractors = q.distractors.some(d => d.toLowerCase().includes(query));
+        const inExp = q.explanation.toLowerCase().includes(query);
+        const inId = (`#${q.id}` === query || `${q.id}` === query);
+        return inTurns || inCorrect || inDistractors || inExp || inId;
+      });
+
+      document.getElementById("bankResultCount").textContent = `Menampilkan ${filtered.length} dari 100 soal`;
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="bg-white rounded-2xl p-8 text-center border border-slate-200 text-slate-500">
+            <i class="fa-solid fa-magnifying-glass text-2xl mb-2 text-slate-400"></i>
+            <p class="text-sm font-semibold">Tidak ada soal yang cocok dengan pencarian Anda.</p>
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach(q => {
+        const isWrongHistory = state.wrongBankIds.includes(q.id);
+        const card = document.createElement("div");
+        card.className = "panel p-5 space-y-3";
+
+        const turnsHtml = q.turns.map(([sp, tx]) => {
+          return `<div class="jp-text text-sm sm:text-base text-slate-800"><span class="font-bold text-indigo-700">${escapeHtml(sp)}：</span>${escapeHtml(tx)}</div>`;
+        }).join("");
+
+        card.innerHTML = `
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded-sm bg-indigo-900 text-white text-xs font-bold mincho">Soal #${q.id}</span>
+              <span class="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 text-xs font-semibold">${q.turns.length} Giliran Bicara</span>
+              ${isWrongHistory ? `<span class="px-2.5 py-1 rounded-lg bg-rose-100 text-rose-800 text-xs font-semibold"><i class="fa-solid fa-circle-exclamation"></i> Pernah Salah</span>` : ""}
+            </div>
+            <button onclick="practiceSingleQuestion(${q.id})" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-lg transition-colors">
+              <i class="fa-solid fa-play mr-1"></i> Latih Soal Ini
+            </button>
+          </div>
+
+          <div class="space-y-1.5 bg-slate-50 p-3.5 rounded-xl border border-slate-200/70">
+            ${turnsHtml}
+          </div>
+
+          <div class="pt-1">
+            <details ${state.showAllBankAnswers ? "open" : ""} class="group">
+              <summary class="cursor-pointer list-none inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 hover:text-indigo-800 select-none">
+                <i class="fa-solid fa-chevron-right group-open:rotate-90 transition-transform"></i>
+                <span>Lihat Kunci Jawaban & Pembahasan</span>
+              </summary>
+              <div class="mt-3 p-3.5 rounded-xl bg-emerald-50/70 border border-emerald-200 space-y-2">
+                <div class="jp-text text-sm font-bold text-emerald-950">
+                  <i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Jawaban Tepat: ${escapeHtml(q.correct)}
+                </div>
+                <div class="text-xs text-slate-600">
+                  <span class="font-semibold text-slate-700">Pengecoh:</span>
+                  <span class="jp-text">${q.distractors.map(d => escapeHtml(d)).join(" ／ ")}</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-700 pt-1 border-t border-emerald-200/60 leading-relaxed">
+                  <strong>Pembahasan:</strong> ${escapeHtml(q.explanation)}
+                </p>
+              </div>
+            </details>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Jump from Bank 100 Soal to practicing that question in Quiz tab
+    function practiceSingleQuestion(qId) {
+      const existingIdx = state.sessionQuestions.findIndex(item => item.id === qId);
+      if (existingIdx !== -1) {
+        // Re-shuffle options for fresh practice if already answered
+        const rawQ = RAW_QUESTIONS.find(q => q.id === qId);
+        state.sessionQuestions[existingIdx] = buildShuffledQuestionItem(rawQ);
+        state.currentIndex = existingIdx;
+      } else {
+        document.getElementById("modeSelect").value = "all";
+        buildSession("all");
+        const newIdx = state.sessionQuestions.findIndex(item => item.id === qId);
+        if (newIdx !== -1) state.currentIndex = newIdx;
+      }
+      saveState();
+      switchTab("quiz");
+      hideSummaryCard();
+      renderQuiz();
+    }
+
+    // Utility: Escape HTML characters
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    // Keyboard shortcuts handler
+    window.addEventListener("keydown", (e) => {
+      // Ignore if typing inside an input/select or modal is open
+      const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : "";
+      if (tag === "input" || tag === "select" || tag === "textarea") return;
+
+      const viewQuizVisible = !document.getElementById("viewQuiz").classList.contains("hidden");
+      const summaryVisible = !document.getElementById("sessionCompleteCard").classList.contains("hidden");
+      if (!viewQuizVisible || summaryVisible) return;
+
+      const key = e.key.toUpperCase();
+      if (key === "A" || key === "1") {
+        e.preventDefault();
+        selectAnswer("A");
+      } else if (key === "B" || key === "2") {
+        e.preventDefault();
+        selectAnswer("B");
+      } else if (key === "C" || key === "3") {
+        e.preventDefault();
+        selectAnswer("C");
+      } else if (key === "D" || key === "4") {
+        e.preventDefault();
+        selectAnswer("D");
+      } else if (e.key === "ArrowRight" || e.key === "Enter") {
+        e.preventDefault();
+        nextQuestion();
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        prevQuestion();
+      }
+    });
+
+    // Initialize Application on Load
+    window.addEventListener("DOMContentLoaded", () => {
+      const hasSaved = loadState();
+      updateSoundIcon();
+      if (hasSaved) {
+        syncCountUI();
+        document.getElementById("modeSelect").value = state.mode;
+        renderQuiz();
+      } else {
+        buildSession("all");
+      }
+    });
+  </script>
+</body>
+</html>
